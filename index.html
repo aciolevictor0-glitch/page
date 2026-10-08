@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Radar do Estoque | Mariana Amorim • Seminovos Importadora</title>
-  <meta name="description" content="Entre no Radar do Estoque, o grupo da Mariana Amorim, e receba todo dia as ofertas da Seminovos Importadora em primeira mão, com condição especial só pra quem está no grupo.">
+  <meta name="description" content="Entre no Radar do Estoque, o grupo da Mariana Amorim, e receba todo dia as ofertas da Seminovos Importadora em primeira mão, com condições especiais só para quem está no grupo.">
   <meta name="theme-color" content="#163c4b">
-  <meta property="og:title" content="Os melhores carros saem antes do anúncio">
+  <meta property="og:title" content="Os melhores carros saem antes da divulgação">
   <meta property="og:description" content="Radar do Estoque da Mariana Amorim: seminovos da Importadora em primeira mão, em Maceió/AL.">
   <meta property="og:image" content="assets/hero.jpg">
   <meta property="og:type" content="website">
@@ -130,7 +130,7 @@
     }
     .hero__bg {
       position: absolute; inset: 0; z-index: -2;
-      background: url("assets/hero.jpg") center 85% / cover no-repeat;
+      background: url("assets/hero.jpg") center bottom / cover no-repeat;
       transform: scale(1.04); animation: heroZoom 14s ease-out forwards;
     }
     .hero::after {
@@ -220,10 +220,9 @@
     /* ---------- Dor ---------- */
     .pain__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
     .pain__card {
-      grid-column: span 2; background: var(--white); border-radius: var(--radius); padding: 28px;
+      grid-column: span 3; background: var(--white); border-radius: var(--radius); padding: 28px;
       box-shadow: var(--shadow-sm); border: 1px solid var(--line); display: grid; gap: 14px; align-content: start;
     }
-    .pain__card:nth-child(4), .pain__card:nth-child(5) { grid-column: span 3; }
     .pain__icon { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: var(--accent-50); color: var(--accent); }
     .pain__card p { font-size: 16px; color: var(--ink); }
     .pain__card p em { font-style: normal; font-weight: 600; color: var(--accent); }
@@ -239,7 +238,7 @@
     .solution__ring {
       position: absolute; inset: -6% -4% -6% 10%; border-radius: 50%; background: var(--teal-100); z-index: -1;
     }
-    .solution__visual img { border-radius: var(--radius-lg); width: 100%; aspect-ratio: 4 / 4.6; object-fit: cover; box-shadow: var(--shadow); }
+    .solution__visual img { border-radius: var(--radius-lg); width: 100%; aspect-ratio: 4 / 4.6; object-fit: cover; object-position: 35% center; box-shadow: var(--shadow); }
     .solution__badge {
       position: absolute; right: -14px; top: 28px; background: var(--white); color: var(--teal-900); border-radius: var(--radius-sm);
       padding: 14px 18px; box-shadow: var(--shadow); display: flex; gap: 12px; align-items: center; max-width: 250px;
@@ -411,6 +410,7 @@
     /* ---------- Rodapé ---------- */
     .footer { padding: 40px 0 48px; text-align: center; color: var(--muted); font-size: 13px; display: grid; gap: 6px; }
     .footer b { color: var(--teal-900); }
+    .footer__credits { font-size: 11px; opacity: .75; margin-top: 8px; }
 
     /* ---------- Barra fixa mobile ---------- */
     .sticky-cta {
@@ -457,7 +457,7 @@
       .nav__cta { padding: 0 16px; }
       .hero { min-height: auto; }
       .hero__content { padding-top: 118px; padding-bottom: 200px; gap: 18px; }
-      .hero__bg { background-position: 62% 70%; }
+      .hero__bg { background-position: 30% bottom; }
       .hero__float--right { display: none; }
       .hero__float--left { left: 16px; right: 16px; max-width: none; bottom: 20px; }
       .hero__float--left img { width: 64px; height: 64px; }
@@ -471,7 +471,7 @@
       .intro { padding: 20px 20px 28px; border-radius: 24px; }
       .intro__actions { flex-direction: column; }
       .pain__grid { grid-template-columns: 1fr; gap: 14px; }
-      .pain__card, .pain__card:nth-child(4), .pain__card:nth-child(5) { grid-column: auto; padding: 22px; grid-template-columns: auto 1fr; align-items: center; }
+      .pain__card { grid-column: auto; padding: 22px; grid-template-columns: auto 1fr; align-items: center; }
       .solution__badge { right: 8px; max-width: 220px; }
       .solution__badge2 { left: 8px; }
       .authority__stat, .authority__card, .safe__card { padding: 28px 24px; }
@@ -546,11 +546,11 @@
   <main>
     <!-- ========== 1-2 HERO: headline + subheadline + CTA ========== -->
     <section class="hero" id="topo">
-      <div class="hero__bg" role="img" aria-label="Carro seminovo em estrada ao entardecer"></div>
+      <div class="hero__bg" role="img" aria-label="Volkswagen Virtus vermelho"></div>
       <div class="container hero__content">
         <span class="chip"><span class="chip__dot"></span><span>Radar do Estoque • <span class="chip__long">ofertas novas todo dia no WhatsApp</span><span class="chip__short">ofertas todo dia</span></span></span>
-        <h1 data-headline>Os melhores carros saem antes do anúncio</h1>
-        <p class="hero__sub">Entre no <strong>Radar do Estoque</strong>, o grupo da Mariana Amorim, e receba todo dia as ofertas da Seminovos Importadora em primeira mão, com condição especial só pra quem está no grupo.</p>
+        <h1 data-headline>Os melhores carros saem antes da divulgação</h1>
+        <p class="hero__sub">Entre no <strong>Radar do Estoque</strong>, o grupo da Mariana Amorim, e receba todo dia as ofertas da Seminovos Importadora em primeira mão, com condições especiais só para quem está no grupo.</p>
         <div class="hero__actions">
           <a class="btn btn--primary btn--lg" href="#" data-cta="hero"><svg class="icon"><use href="#i-chat"/></svg><span data-cta-label>Quero entrar no grupo</span></a>
           <div class="microcopy">
@@ -565,7 +565,7 @@
         <img src="assets/oferta.jpg" alt="" width="86" height="86">
         <div>
           <strong>Primeira mão</strong>
-          <p>O carro chega na Importadora e aparece primeiro no grupo. Só depois vai pro anúncio aberto.</p>
+          <p>O carro chega à Importadora e aparece primeiro no grupo. Só depois vai para divulgação.</p>
         </div>
       </div>
       <div class="hero__float hero__float--right glass">
@@ -582,7 +582,7 @@
           <div class="trust__item reveal"><svg class="icon"><use href="#i-gift"/></svg>Grátis</div>
           <div class="trust__item reveal"><svg class="icon"><use href="#i-user"/></svg>Sem cadastro</div>
           <div class="trust__item reveal"><svg class="icon"><use href="#i-bell"/></svg>Oferta todo dia</div>
-          <div class="trust__item reveal"><svg class="icon"><use href="#i-repeat"/></svg>Seu carro na troca</div>
+          <div class="trust__item reveal"><svg class="icon"><use href="#i-chat"/></svg>Atendimento on-line</div>
         </div>
       </div>
     </section>
@@ -603,9 +603,9 @@
           <div class="intro__text">
             <span class="eyebrow">Oi, eu sou a Mariana</span>
             <h2 class="h-display">O carro bom <em>não espera</em></h2>
-            <p>Há <strong>18 anos</strong> eu trabalho com carro e aprendi uma coisa: o carro bom não espera.</p>
-            <p>Muitos dos seminovos que chegam aqui na Importadora são <strong>vendidos antes mesmo de ir pro anúncio</strong>. Quem leva é quem fica sabendo primeiro.</p>
-            <p>Por isso eu criei o <strong>Radar do Estoque</strong>, um grupo no WhatsApp. Chegou carro no estoque, você vê ali <strong>antes de todo mundo</strong>, já com a condição do grupo.</p>
+            <p>Há <strong>18 anos</strong> eu trabalho com carros e aprendi uma coisa: carro bom não espera.</p>
+            <p>Muitos dos seminovos que chegam aqui na Importadora são <strong>vendidos antes mesmo de irem para divulgação</strong>. Quem leva é quem fica sabendo primeiro.</p>
+            <p>Por isso eu criei o <strong>Radar do Estoque</strong>, um grupo no WhatsApp. Chegou carro no estoque, você vê ali <strong>antes de todo mundo</strong>, já com as condições do grupo.</p>
             <div class="intro__actions">
               <a class="btn btn--primary" href="#" data-cta="abertura"><span data-cta-label>Quero entrar no grupo</span><svg class="icon"><use href="#i-arrow-right"/></svg></a>
               <a class="btn btn--ghost" href="#como-funciona">Como funciona</a>
@@ -626,19 +626,15 @@
         <div class="pain__grid">
           <article class="pain__card reveal">
             <span class="pain__icon"><svg class="icon"><use href="#i-x"/></svg></span>
-            <p>Você vê o anúncio, chama, e a resposta é <em>“esse já foi vendido”</em>.</p>
+            <p>Você vê o anúncio, chama o vendedor e a resposta é <em>“esse já foi vendido”</em>.</p>
           </article>
           <article class="pain__card reveal">
             <span class="pain__icon"><svg class="icon"><use href="#i-search"/></svg></span>
-            <p>Passa dias rodando site e Instagram e só acha carro caro ou rodado demais.</p>
-          </article>
-          <article class="pain__card reveal">
-            <span class="pain__icon"><svg class="icon"><use href="#i-repeat"/></svg></span>
-            <p>Tem um carro pra dar na troca e não sabe se vão avaliar direito.</p>
+            <p>Passa dias procurando em sites e no Instagram e só encontra carros caros ou rodados demais.</p>
           </article>
           <article class="pain__card reveal">
             <span class="pain__icon"><svg class="icon"><use href="#i-shield-alert"/></svg></span>
-            <p>Quer comprar com segurança, mas tem medo de cair em roubada.</p>
+            <p>Quer comprar com segurança, mas tem medo de cair numa roubada.</p>
           </article>
           <article class="pain__card reveal">
             <span class="pain__icon"><svg class="icon"><use href="#i-clock"/></svg></span>
@@ -654,26 +650,26 @@
         <div class="section-head reveal">
           <span class="eyebrow">A solução</span>
           <h2 class="h-display">Radar do Estoque <em>da Mariana</em></h2>
-          <p class="lead">O carro chega na Importadora e aparece primeiro no grupo. Só depois vai pro anúncio aberto.</p>
+          <p class="lead">O carro chega à Importadora e aparece primeiro no grupo. Só depois vai para divulgação.</p>
         </div>
 
         <div class="solution__grid">
           <div class="solution__visual reveal">
             <span class="solution__ring" aria-hidden="true"></span>
-            <img src="assets/estoque.jpg" alt="Seminovo recém-chegado no estoque da Importadora" loading="lazy" width="1000" height="634">
+            <img src="assets/estoque.jpg" alt="Volkswagen Taos seminovo recém-chegado ao estoque" loading="lazy" width="1000" height="720">
             <div class="solution__badge">
               <span class="pain__icon"><svg class="icon"><use href="#i-zap"/></svg></span>
               <div><b>Chegou no estoque?</b><small>Aparece no grupo primeiro</small></div>
             </div>
             <div class="solution__badge solution__badge2">
               <span class="pain__icon"><svg class="icon"><use href="#i-phone"/></svg></span>
-              <div><b>Todo dia no celular</b><small>Com foto, informação e condição</small></div>
+              <div><b>Todo dia no celular</b><small>Com fotos, informações e condições</small></div>
             </div>
           </div>
 
           <div>
             <div class="solution__intro reveal">
-              <p>Você não precisa ficar caçando. A oferta chega todo dia no seu celular, com foto, informação e a condição exclusiva de quem está ali.</p>
+              <p>Você não precisa ficar caçando. As ofertas chegam todo dia no seu celular, com fotos, informações e as condições exclusivas de quem está ali.</p>
             </div>
             <ul class="benefits">
               <li class="benefit is-featured reveal">
@@ -682,19 +678,15 @@
               </li>
               <li class="benefit reveal">
                 <span class="benefit__icon"><svg class="icon"><use href="#i-tag"/></svg></span>
-                <div><h3>Condição que não aparece no anúncio aberto</h3><p>Quem está no grupo tem vantagem.</p></div>
+                <div><h3>Condições que não aparecem na divulgação</h3><p>Quem está no grupo tem vantagem.</p></div>
               </li>
               <li class="benefit reveal">
                 <span class="benefit__icon"><svg class="icon"><use href="#i-phone"/></svg></span>
-                <div><h3>Oferta todo dia no seu celular</h3><p>Você só abre o WhatsApp.</p></div>
-              </li>
-              <li class="benefit reveal">
-                <span class="benefit__icon"><svg class="icon"><use href="#i-repeat"/></svg></span>
-                <div><h3>Seu carro entra na troca</h3><p>Dá pra usar como parte do pagamento.</p></div>
+                <div><h3>Oferta todo dia no seu celular</h3><p>Basta abrir o WhatsApp.</p></div>
               </li>
               <li class="benefit reveal">
                 <span class="benefit__icon"><svg class="icon"><use href="#i-user"/></svg></span>
-                <div><h3>Você fala com uma pessoa, não com uma loja</h3><p>A Mariana te atende direto.</p></div>
+                <div><h3>Você fala com uma pessoa, não com uma loja</h3><p>A Mariana atende você diretamente.</p></div>
               </li>
               <li class="benefit reveal">
                 <span class="benefit__icon"><svg class="icon"><use href="#i-award"/></svg></span>
@@ -717,10 +709,10 @@
         <div class="authority">
           <div class="authority__stat reveal">
             <div class="authority__num">18<span>anos</span></div>
-            <p>ajudando gente a comprar e trocar de carro em Maceió</p>
+            <p>de atuação no mercado automotivo, com curadoria criteriosa de seminovos</p>
           </div>
           <div class="authority__card reveal">
-            <p class="authority__quote">São 18 anos ajudando gente a comprar e trocar de carro. Eu sei o que vale a pena e o que é roubada, e é isso que eu coloco no grupo.</p>
+            <p class="authority__quote">São 18 anos de experiência no mercado automotivo. Sei reconhecer um bom negócio e identificar o que não vale a pena. É essa curadoria que eu levo para o grupo.</p>
             <div class="authority__who">
               <span class="avatar">MA</span>
               <div><b>Mariana Amorim</b><small>Seminovos Importadora</small></div>
@@ -743,21 +735,21 @@
           <h2 class="h-display reveal">No Radar <em>você recebe</em></h2>
           <ul class="checklist reveal">
             <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Ofertas diárias de seminovos</li>
-            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Carros do estoque antes do anúncio aberto</li>
-            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Condição especial exclusiva pra membros</li>
-            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Atendimento direto comigo pra tirar dúvida ou avaliar sua troca</li>
+            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Carros do estoque antes da divulgação</li>
+            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Condições especiais exclusivas para membros</li>
+            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Atendimento direto comigo para tirar dúvidas</li>
           </ul>
 
           <h3 class="reveal" style="font-size:18px;text-transform:uppercase;letter-spacing:.04em">Como funciona</h3>
           <ol class="steps reveal">
             <li>Você toca no botão e entra no grupo.</li>
             <li>Recebe as ofertas todo dia.</li>
-            <li>Gostou de um carro? Me chama no privado.</li>
+            <li>Gostou de um carro? Me chame no privado.</li>
           </ol>
 
           <div class="price reveal">
             <b>Quanto custa: <span>nada.</span></b>
-            <p>O que custa caro é ficar de fora: ver o carro que você queria vendido pra outra pessoa.</p>
+            <p>O que custa caro é ficar de fora: ver o carro que você queria vendido para outra pessoa.</p>
           </div>
 
           <div class="offer__cta reveal">
@@ -786,13 +778,13 @@
                 <div class="bubble">
                   <div class="bubble__name">Mariana Amorim</div>
                   <img src="assets/oferta.jpg" alt="" loading="lazy">
-                  Ainda não foi pro anúncio. Fotos e informações completas aqui.
+                  Ainda não foi para divulgação. Fotos e informações completas aqui.
                   <span class="bubble__pill">Condição exclusiva do grupo</span>
                   <div class="bubble__time">08:03</div>
                 </div>
                 <div class="bubble">
                   <div class="bubble__name">Mariana Amorim</div>
-                  Interessou? Me chama no privado 💙
+                  Interessou? Me chame no privado 💙
                   <div class="bubble__time">08:03</div>
                 </div>
               </div>
@@ -800,7 +792,7 @@
           </div>
           <div class="phone__notif" aria-hidden="true">
             <span class="benefit__icon"><svg class="icon"><use href="#i-bell"/></svg></span>
-            <span><b>Nova oferta no Radar</b><br>antes do anúncio aberto</span>
+            <span><b>Nova oferta no Radar</b><br>antes da divulgação</span>
           </div>
         </div>
       </div>
@@ -822,16 +814,16 @@
 
         <div class="slider" data-slider>
           <article class="objection">
-            <p class="objection__q">“Mas esses grupos enchem o celular de mensagem...”</p>
+            <p class="objection__q">“Mas esses grupos enchem o celular de mensagens...”</p>
             <div class="objection__a">
-              <p>Aqui só entra oferta de carro. Sem corrente, sem conversa paralela. Se quiser, silencia e olha quando der.</p>
+              <p>Aqui só entram ofertas de carros. Sem correntes, sem conversas paralelas. Se preferir, silencie o grupo e confira quando puder.</p>
               <span class="tag">Só oferta de carro</span>
             </div>
           </article>
           <article class="objection">
             <p class="objection__q">“Mas vou ser abordado por vendedor toda hora...”</p>
             <div class="objection__a">
-              <p>Ninguém vai te ligar sem você pedir. Quem decide quando falar comigo é você.</p>
+              <p>Ninguém vai ligar para você sem que você peça. Quem decide quando falar comigo é você.</p>
               <span class="tag">Você no controle</span>
             </div>
           </article>
@@ -845,7 +837,7 @@
           <article class="objection">
             <p class="objection__q">“Mas o preço vai ser alto...”</p>
             <div class="objection__a">
-              <p>O grupo existe justamente pra mostrar condição que não vai pro anúncio aberto. Você compara e decide.</p>
+              <p>O grupo existe justamente para mostrar condições que não vão para divulgação. Você compara e decide.</p>
               <span class="tag">Condição exclusiva</span>
             </div>
           </article>
@@ -868,8 +860,8 @@
         </div>
         <div class="safe__card safe__card--dark reveal">
           <span class="pain__icon" style="background:rgba(232,72,59,.18)"><svg class="icon"><use href="#i-zap"/></svg></span>
-          <p class="safe__big">O grupo não tem limite de vagas. <span>O estoque tem.</span></p>
-          <p>Carro com preço bom não fica parado. Quando aparece no grupo, quem vê primeiro leva.</p>
+          <p class="safe__big">Nosso estoque gira rápido. <span>Quem está fora perde.</span></p>
+          <p>O estoque da Importadora tem alta rotatividade: carro com boa condição não fica parado. Quem não está no grupo perde as melhores oportunidades.</p>
           <a class="btn btn--primary" href="#" data-cta="urgencia" style="position:relative;z-index:1;justify-self:start"><span data-cta-label>Quero entrar no grupo</span><svg class="icon"><use href="#i-arrow-right"/></svg></a>
         </div>
       </div>
@@ -884,28 +876,20 @@
         </div>
         <div class="faq">
           <details class="reveal" open>
-            <summary>Precisa pagar pra entrar?<span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <summary>Precisa pagar para entrar?<span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
             <p>Não. É grátis.</p>
           </details>
           <details class="reveal">
             <summary>Sou obrigado a comprar?<span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
-            <p>Não. Você olha as ofertas e só me chama se tiver interesse.</p>
+            <p>Não. Você acompanha as ofertas e só me chama se tiver interesse.</p>
           </details>
           <details class="reveal">
-            <summary>Vou receber muita mensagem?<span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
-            <p>Só as ofertas do dia. Pode silenciar o grupo sem perder nada.</p>
-          </details>
-          <details class="reveal">
-            <summary>Vocês aceitam meu carro na troca?<span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
-            <p>Sim. Me chama no privado com fotos e eu faço a avaliação.</p>
-          </details>
-          <details class="reveal">
-            <summary>Dá pra financiar?<span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
-            <p>Sim, com análise de crédito. Pra financiamento, o CPF precisa estar sem restrição.</p>
+            <summary>Vou receber muitas mensagens?<span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p>Só as ofertas do dia. Você pode silenciar o grupo sem perder nada.</p>
           </details>
           <details class="reveal">
             <summary>Atende fora de Maceió?<span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
-            <p>Sim, Maceió e cidades próximas em Alagoas.</p>
+            <p>Sim. O atendimento on-line é para todos, com vídeos, fotos e todas as condições de cada carro. Para ver o carro pessoalmente, apenas em Maceió.</p>
           </details>
         </div>
       </div>
@@ -916,8 +900,8 @@
       <div class="container">
         <div class="final reveal">
           <span class="chip"><span class="chip__dot"></span>Estoque novo toda semana</span>
-          <h2 class="h-display">Seu próximo carro pode chegar no estoque <em>essa semana</em></h2>
-          <p class="lead">A diferença entre ver ele primeiro ou ver ele vendido é estar no grupo.</p>
+          <h2 class="h-display">Seu próximo carro pode chegar ao estoque <em>nesta semana</em></h2>
+          <p class="lead">A diferença entre vê-lo primeiro e vê-lo vendido é estar no grupo.</p>
           <a class="btn btn--primary btn--lg" href="#" data-cta="final"><svg class="icon"><use href="#i-chat"/></svg>Quero entrar agora</a>
           <div class="microcopy">
             <span><svg class="icon"><use href="#i-check"/></svg>Grátis</span>
@@ -927,7 +911,7 @@
         </div>
 
         <aside class="ps reveal">
-          <p><b>PS:</b> Lembra do que eu falei no vídeo? Muitos carros que entram aqui nem chegam a ser anunciados. Quem está no grupo vê primeiro. Entra, que vai valer a pena.</p>
+          <p><b>PS:</b> Lembra o que eu falei no vídeo? Muitos carros que entram aqui nem chegam a ser divulgados. Quem está no grupo vê primeiro. Entre, vai valer a pena.</p>
           <span class="ps__sign">💙 Mariana.</span>
         </aside>
       </div>
@@ -936,7 +920,8 @@
 
   <footer class="footer container">
     <p><b>Seminovos Importadora</b> • Radar do Estoque da Mariana Amorim</p>
-    <p><svg class="icon" style="width:14px;height:14px;vertical-align:-2px;color:var(--accent)"><use href="#i-pin"/></svg> Maceió/AL e cidades próximas</p>
+    <p><svg class="icon" style="width:14px;height:14px;vertical-align:-2px;color:var(--accent)"><use href="#i-pin"/></svg> Loja em Maceió/AL • Atendimento on-line para todos</p>
+    <p class="footer__credits">Fotos ilustrativas: <a href="https://commons.wikimedia.org/w/index.php?curid=119605822" target="_blank" rel="noopener">DriveSpark</a> (CC BY 3.0), <a href="https://commons.wikimedia.org/w/index.php?curid=143496152" target="_blank" rel="noopener">Maxi-Napo-99</a> (CC BY 4.0) e <a href="https://commons.wikimedia.org/w/index.php?curid=94896199" target="_blank" rel="noopener">Garagem do Jabulas</a> (CC BY 3.0), via Wikimedia Commons, editadas.</p>
   </footer>
 
   <!-- Barra fixa (mobile) -->
@@ -952,12 +937,12 @@
     var WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/DXF3MaIjAjj9NhRT1Im30z";
 
     /* Testes A/B por URL (use no anúncio):
-       ?h=a  Os melhores carros saem antes do anúncio (padrão)
+       ?h=a  Os melhores carros saem antes da divulgação (padrão)
        ?h=b  Seminovos em Maceió, antes de todo mundo
        ?h=c  Cansou de chegar e o carro já ter sido vendido?
        ?cta=2  troca "Quero entrar no grupo" por "Ver os carros primeiro" */
     var HEADLINES = {
-      a: "Os melhores carros saem antes do anúncio",
+      a: "Os melhores carros saem antes da divulgação",
       b: "Seminovos em Maceió, antes de todo mundo",
       c: "Cansou de chegar e o carro já ter sido vendido?"
     };
