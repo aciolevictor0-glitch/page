@@ -1,4 +1,4 @@
-# LP Grupo VIP Mariana Amorim | Seminovos Importadora
+# LP Radar do Estoque | Mariana Amorim • Seminovos Importadora
 
 Página única (`index.html`), sem build. Basta subir a pasta em qualquer hospedagem estática (Netlify, Vercel, GitHub Pages, Hostinger).
 
