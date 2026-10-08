@@ -6,6 +6,7 @@ Página única (`index.html`), sem build. Basta subir a pasta em qualquer hosped
 
 1. **Link do grupo**: já configurado em `WHATSAPP_GROUP_URL`, no final do `index.html`. Todos os botões usam esse link; se o convite for redefinido no WhatsApp, troque ali.
 2. **Foto da Mariana**: `assets/mariana.jpg` (bloco de abertura) e `assets/mariana-avatar.jpg` (recorte do rosto usado nos avatares do hero, da autoridade e do celular). Para trocar, mantenha os nomes dos arquivos.
+   - **Entregas (prova social)**: `assets/entrega-1.jpg` a `entrega-5.jpg`, com as placas dos clientes borradas. Para adicionar ou trocar, edite a seção `#clientes` do `index.html`.
 3. **Fotos de carro**: `assets/hero.jpg` (VW Virtus), `assets/estoque.jpg` (VW Taos) e `assets/oferta.jpg` (VW Nivus) são fotos ilustrativas do Wikimedia Commons (licença CC BY, placas borradas). Enquanto forem usadas, mantenha o crédito no rodapé. Ao trocar por fotos reais do estoque, mantenha os nomes dos arquivos e remova a linha `footer__credits`.
 4. **Pixel / GA4**: cole os scripts no `<head>` (há um comentário marcando o lugar). Todo clique em CTA dispara `fbq('track','Lead')`, `gtag('event','generate_lead')` e um push `cta_whatsapp_click` no `dataLayer`, com a posição do botão.
 
