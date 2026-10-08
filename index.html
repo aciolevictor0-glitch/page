@@ -243,7 +243,7 @@
     .solution__ring {
       position: absolute; inset: -6% -4% -6% 10%; border-radius: 50%; background: var(--navy-100); z-index: -1;
     }
-    .solution__visual img { border-radius: var(--radius-lg); width: 100%; aspect-ratio: 4 / 4.6; object-fit: cover; object-position: 35% center; box-shadow: var(--shadow); }
+    .solution__visual img { border-radius: var(--radius-lg); width: 100%; aspect-ratio: 4 / 4.6; object-fit: cover; object-position: 40% center; box-shadow: var(--shadow); }
     .solution__badge {
       position: absolute; right: -14px; top: 28px; background: var(--white); color: var(--navy-900); border-radius: var(--radius-sm);
       padding: 14px 18px; box-shadow: var(--shadow); display: flex; gap: 12px; align-items: center; max-width: 250px;
@@ -422,7 +422,7 @@
     }
     .final::before {
       content: ""; position: absolute; inset: 0; opacity: .25;
-      background: url("assets/hero.jpg") center 70% / cover no-repeat; z-index: 0;
+      background: url("assets/cta-final.jpg") center 60% / cover no-repeat; z-index: 0;
     }
     .final::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21,27,39,.6), rgba(21,27,39,.95)); z-index: 0; }
     .final > * { position: relative; z-index: 1; }
@@ -443,7 +443,6 @@
     /* ---------- Rodapé ---------- */
     .footer { padding: 40px 0 48px; text-align: center; color: var(--muted); font-size: 13px; display: grid; gap: 6px; }
     .footer b { color: var(--navy-900); }
-    .footer__credits { font-size: 11px; opacity: .75; margin-top: 8px; }
 
     /* ---------- Barra fixa mobile ---------- */
     .sticky-cta {
@@ -490,7 +489,7 @@
       .nav__cta { padding: 0 16px; }
       .hero { min-height: auto; }
       .hero__content { padding-top: 118px; padding-bottom: 200px; gap: 18px; }
-      .hero__bg { background-position: 30% bottom; }
+      .hero__bg { background-position: 62% bottom; }
       .hero__float--right { display: none; }
       .hero__float--left { left: 16px; right: 16px; max-width: none; bottom: 20px; }
       .hero__float--left img { width: 64px; height: 64px; }
@@ -580,7 +579,7 @@
   <main>
     <!-- ========== 1-2 HERO: headline + subheadline + CTA ========== -->
     <section class="hero" id="topo">
-      <div class="hero__bg" role="img" aria-label="Volkswagen Virtus vermelho"></div>
+      <div class="hero__bg" role="img" aria-label="Volkswagen Nivus azul"></div>
       <div class="container hero__content">
         <span class="chip"><span class="chip__dot"></span><span>Radar do Estoque • <span class="chip__long">ofertas novas todo dia no WhatsApp</span><span class="chip__short">ofertas todo dia</span></span></span>
         <h1 data-headline>Os melhores carros saem antes da divulgação</h1>
@@ -596,7 +595,7 @@
       </div>
 
       <div class="hero__float hero__float--left glass">
-        <img src="assets/oferta.jpg" alt="" width="86" height="86">
+        <img src="assets/destaque.jpg" alt="" width="86" height="86">
         <div>
           <strong>Primeira mão</strong>
           <p>O carro chega à Importadora e aparece primeiro no grupo. Só depois vai para divulgação.</p>
@@ -685,7 +684,7 @@
         <div class="solution__grid">
           <div class="solution__visual reveal">
             <span class="solution__ring" aria-hidden="true"></span>
-            <img src="assets/estoque.jpg" alt="Volkswagen Taos seminovo recém-chegado ao estoque" loading="lazy" width="1000" height="720">
+            <img src="assets/estoque.jpg" alt="Volkswagen Polo vermelho recém-chegado ao estoque" loading="lazy" width="1000" height="663">
             <div class="solution__badge">
               <span class="pain__icon"><svg class="icon"><use href="#i-zap"/></svg></span>
               <div><b>Chegou no estoque?</b><small>Aparece no grupo primeiro</small></div>
@@ -987,7 +986,6 @@
   <footer class="footer container">
     <p><b>Seminovos Importadora</b> • Radar do Estoque da Mariana Amorim</p>
     <p><svg class="icon" style="width:14px;height:14px;vertical-align:-2px;color:var(--accent-ink)"><use href="#i-pin"/></svg> Loja em Maceió/AL • Atendimento on-line para todos</p>
-    <p class="footer__credits">Fotos ilustrativas: <a href="https://commons.wikimedia.org/w/index.php?curid=119605822" target="_blank" rel="noopener">DriveSpark</a> (CC BY 3.0), <a href="https://commons.wikimedia.org/w/index.php?curid=143496152" target="_blank" rel="noopener">Maxi-Napo-99</a> (CC BY 4.0) e <a href="https://commons.wikimedia.org/w/index.php?curid=94896199" target="_blank" rel="noopener">Garagem do Jabulas</a> (CC BY 3.0), via Wikimedia Commons, editadas.</p>
   </footer>
 
   <!-- Barra fixa (mobile) -->
