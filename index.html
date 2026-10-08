@@ -178,7 +178,9 @@
     .avatar {
       width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; flex: none;
       background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: 15px; border: 2px solid rgba(255,255,255,.8);
+      overflow: hidden;
     }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
     .hero__float--right b { font-size: 26px; font-weight: 800; line-height: 1; display: block; }
     .hero__float--right small { font-size: 11.5px; line-height: 1.3; display: block; opacity: .85; max-width: 140px; }
 
@@ -208,10 +210,7 @@
       background: linear-gradient(150deg, var(--navy-700), var(--navy-950));
       display: grid; place-items: center; box-shadow: var(--shadow);
     }
-    .photo-slot__placeholder { display: grid; justify-items: center; gap: 10px; color: rgba(255,255,255,.75); text-align: center; padding: 20px; }
-    .photo-slot__placeholder .avatar { width: 96px; height: 96px; font-size: 32px; }
-    .photo-slot__placeholder small { font-size: 12px; opacity: .8; }
-    .photo-slot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .photo-slot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 22%; }
     .photo-slot__tag {
       position: absolute; left: 16px; bottom: 16px; padding: 10px 14px; z-index: 1;
       border-radius: 14px; font-size: 13px; line-height: 1.3;
@@ -446,7 +445,7 @@
       .nav__links { display: none; }
       .intro, .solution__grid, .offer__grid, .authority, .safe { grid-template-columns: 1fr; }
       .intro { gap: 36px; }
-      .photo-slot { max-width: 460px; aspect-ratio: 4 / 3.6; }
+      .photo-slot { max-width: 460px; aspect-ratio: 1 / 1; }
       .solution__visual { max-width: 560px; margin: 0 auto 10px; width: 100%; }
       .slider { grid-auto-columns: calc((100% - 20px) / 2); }
       .phone__notif { left: -10px; }
@@ -576,7 +575,7 @@
         </div>
       </div>
       <div class="hero__float hero__float--right glass">
-        <span class="avatar" aria-hidden="true">MA</span>
+        <span class="avatar" aria-hidden="true"><img src="assets/mariana-avatar.jpg" alt="" width="80" height="80"></span>
         <div><b>20 anos</b><small>no mercado automotivo em Maceió/AL</small></div>
       </div>
     </section>
@@ -599,12 +598,7 @@
       <div class="container">
         <div class="intro reveal">
           <div class="photo-slot">
-            <!-- FOTO DA MARIANA: salve como assets/mariana.jpg (vertical, ~900x1000). Enquanto não existir, aparece o placeholder. -->
-            <div class="photo-slot__placeholder">
-              <span class="avatar">MA</span>
-              <small>Foto da Mariana<br>(assets/mariana.jpg)</small>
-            </div>
-            <img src="assets/mariana.jpg" alt="Mariana Amorim, da Seminovos Importadora" loading="lazy" onerror="this.remove()">
+            <img src="assets/mariana.jpg" alt="Mariana Amorim, da Seminovos Importadora" loading="lazy" width="853" height="1280">
             <div class="photo-slot__tag glass"><b>Mariana Amorim</b>Seminovos Importadora</div>
           </div>
           <div class="intro__text">
@@ -721,7 +715,7 @@
           <div class="authority__card reveal">
             <p class="authority__quote">São 20 anos de experiência no mercado automotivo. Sei reconhecer um bom negócio e identificar o que não vale a pena. É essa curadoria que eu levo para o grupo.</p>
             <div class="authority__who">
-              <span class="avatar">MA</span>
+              <span class="avatar"><img src="assets/mariana-avatar.jpg" alt="" width="80" height="80"></span>
               <div><b>Mariana Amorim</b><small>Seminovos Importadora</small></div>
             </div>
             <div class="tags">
@@ -773,7 +767,7 @@
           <div class="phone" aria-hidden="true">
             <div class="phone__screen">
               <div class="phone__bar">
-                <span class="avatar">MA</span>
+                <span class="avatar" aria-hidden="true"><img src="assets/mariana-avatar.jpg" alt="" width="80" height="80"></span>
                 <div><b>Radar do Estoque</b><small>Mariana Amorim • Importadora</small></div>
               </div>
               <div class="phone__chat">
