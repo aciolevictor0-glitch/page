@@ -1,0 +1,316 @@
+{
+  "_leia_me": [
+    "Edite os textos, o link e as imagens da página aqui. Com a página publicada, o que está neste arquivo substitui o que está no index.html.",
+    "Textos aceitam <strong>, <em>, <b> e <br>. Nos títulos, a parte entre <em> recebe o destaque âmbar.",
+    "Listas (itens, passos, perguntas) mantêm a mesma quantidade de itens do HTML. Para adicionar ou remover um item, é preciso mexer no index.html.",
+    "Imagens: coloque o arquivo na pasta assets/ e troque o caminho em 'src'.",
+    "Aberto direto do computador (file://) a página ignora este arquivo e usa os textos do HTML."
+  ],
+  "config": {
+    "whatsapp_grupo": "https://chat.whatsapp.com/DXF3MaIjAjj9NhRT1Im30z",
+    "headlines": {
+      "a": "Os melhores carros saem antes da divulgação",
+      "b": "Seminovos em Maceió, antes de todo mundo",
+      "c": "Cansou de chegar e o carro já ter sido vendido?"
+    },
+    "botao_principal": {
+      "1": "Quero entrar no grupo",
+      "2": "Ver os carros primeiro"
+    }
+  },
+  "seo": {
+    "titulo": "Radar do Estoque | Mariana Amorim • Seminovos Importadora",
+    "descricao": "Entre no Radar do Estoque, o grupo da Mariana Amorim, e receba todo dia as ofertas da Seminovos Importadora em primeira mão, com condições especiais só para quem está no grupo."
+  },
+  "textos": {
+    "marca": {
+      "nome": "Radar do Estoque",
+      "subtitulo": "Mariana Amorim • Seminovos Importadora"
+    },
+    "menu": {
+      "links": [
+        "Benefícios",
+        "Clientes",
+        "Como funciona",
+        "Dúvidas"
+      ],
+      "botao": "Entrar no grupo"
+    },
+    "hero": {
+      "selo": "ofertas novas todo dia no WhatsApp",
+      "selo_celular": "ofertas todo dia",
+      "subtitulo": "Entre no <strong>Radar do Estoque</strong>, o grupo da Mariana Amorim, e receba todo dia as ofertas da Seminovos Importadora em primeira mão, com condições especiais só para quem está no grupo.",
+      "garantias": [
+        "Grátis",
+        "Sem cadastro",
+        "Sai quando quiser"
+      ],
+      "card_esquerdo": {
+        "titulo": "Primeira mão",
+        "texto": "O carro chega à Importadora e aparece primeiro no grupo. Só depois vai para divulgação."
+      },
+      "card_direito": {
+        "titulo": "20 anos",
+        "texto": "no mercado automotivo em Maceió/AL"
+      }
+    },
+    "faixa": {
+      "titulo": "<b>20 anos</b> no mercado automotivo • Seminovos Importadora • Maceió/AL",
+      "selos": [
+        "Grátis",
+        "Sem cadastro",
+        "Oferta todo dia",
+        "Atendimento on-line"
+      ]
+    },
+    "abertura": {
+      "foto_nome": "Mariana Amorim",
+      "foto_legenda": "Seminovos Importadora",
+      "rotulo": "Oi, eu sou a Mariana",
+      "titulo": "O carro bom <em>não espera</em>",
+      "paragrafos": [
+        "Há <strong>20 anos</strong> eu trabalho com carros e aprendi uma coisa: carro bom não espera.",
+        "Muitos dos seminovos que chegam aqui na Importadora são <strong>vendidos antes mesmo de irem para divulgação</strong>. Quem leva é quem fica sabendo primeiro.",
+        "Por isso eu criei o <strong>Radar do Estoque</strong>, um grupo no WhatsApp. Chegou carro no estoque, você vê ali <strong>antes de todo mundo</strong>, já com as condições do grupo."
+      ],
+      "botao_secundario": "Como funciona"
+    },
+    "dor": {
+      "rotulo": "Soa familiar?",
+      "titulo": "Quem procura carro em Maceió <em>conhece essa história</em>",
+      "itens": [
+        "Você vê o anúncio, chama o vendedor e a resposta é <em>“esse já foi vendido”</em>.",
+        "Passa dias procurando em sites e no Instagram e só encontra carros caros ou rodados demais.",
+        "Quer comprar com segurança, mas tem medo de cair numa roubada.",
+        "Não tem tempo de ficar indo de loja em loja."
+      ]
+    },
+    "solucao": {
+      "rotulo": "A solução",
+      "titulo": "Radar do Estoque <em>da Mariana</em>",
+      "subtitulo": "O carro chega à Importadora e aparece primeiro no grupo. Só depois vai para divulgação.",
+      "selo_1": {
+        "titulo": "Chegou no estoque?",
+        "texto": "Aparece no grupo primeiro"
+      },
+      "selo_2": {
+        "titulo": "Todo dia no celular",
+        "texto": "Com fotos, informações e condições"
+      },
+      "texto": "Você não precisa ficar garimpando: aqui as ofertas chegam todos os dias no seu celular. Fotos, informações sobre os carros e condições exclusivas.",
+      "beneficios": [
+        {
+          "titulo": "Você vê o carro antes de ele virar disputa",
+          "texto": "Chega primeiro, escolhe com calma."
+        },
+        {
+          "titulo": "Condições que não aparecem na divulgação",
+          "texto": "Quem está no grupo tem vantagem."
+        },
+        {
+          "titulo": "Oferta todo dia no seu celular",
+          "texto": "Basta abrir o WhatsApp."
+        },
+        {
+          "titulo": "Você fala com uma pessoa, não com uma loja",
+          "texto": "A Mariana atende você diretamente."
+        },
+        {
+          "titulo": "20 anos de experiência do seu lado",
+          "texto": "Sem a insegurança de comprar com um desconhecido."
+        }
+      ]
+    },
+    "autoridade": {
+      "rotulo": "Por que confiar",
+      "titulo": "Quem escolhe os carros <em>do grupo</em>",
+      "numero": "20<span>anos</span>",
+      "numero_texto": "de atuação no mercado automotivo, com curadoria criteriosa de seminovos",
+      "citacao": "São 20 anos de experiência no mercado automotivo. Sei reconhecer um bom negócio e identificar o que não vale a pena. É essa curadoria que eu levo para o grupo.",
+      "nome": "Mariana Amorim",
+      "cargo": "Seminovos Importadora",
+      "etiquetas": [
+        "20 anos no mercado automotivo",
+        "Seminovos Importadora",
+        "Maceió/AL"
+      ]
+    },
+    "clientes": {
+      "rotulo": "Quem já comprou",
+      "titulo": "Quem saiu daqui <em>com o carro certo</em>",
+      "subtitulo": "Algumas das entregas feitas pela Mariana na Seminovos Importadora.",
+      "legenda_fotos": [
+        "Entrega realizada",
+        "Entrega realizada",
+        "Entrega realizada",
+        "Entrega realizada",
+        "Entrega realizada"
+      ],
+      "chamada": "O próximo carro com laço pode ser o seu.",
+      "botao": "Quero ver os carros primeiro"
+    },
+    "oferta": {
+      "rotulo": "O que você recebe",
+      "titulo": "No Radar <em>você recebe</em>",
+      "itens": [
+        "Ofertas diárias de seminovos",
+        "Carros do estoque antes da divulgação",
+        "Condições especiais exclusivas para membros",
+        "Atendimento direto comigo para tirar dúvidas"
+      ],
+      "como_funciona_titulo": "Como funciona",
+      "passos": [
+        "Você toca no botão e entra no grupo.",
+        "Recebe as ofertas todo dia.",
+        "Gostou de um carro? Me chame no privado."
+      ],
+      "preco": "Quanto custa: <span>nada.</span>",
+      "preco_texto": "O que custa caro é ficar de fora: ver o carro que você queria vendido para outra pessoa.",
+      "botao": "Ver os carros primeiro",
+      "garantias": [
+        "Grátis",
+        "Sem cadastro",
+        "Sai quando quiser"
+      ]
+    },
+    "celular": {
+      "grupo_nome": "Radar do Estoque",
+      "grupo_info": "Mariana Amorim • Importadora",
+      "mensagens": [
+        "Bom dia, grupo! Chegou hoje no estoque 👇",
+        "Ainda não foi para divulgação. Fotos e informações completas aqui.",
+        "Interessou? Me chame no privado."
+      ],
+      "etiqueta_oferta": "Condição exclusiva do grupo",
+      "notificacao": "<b>Nova oferta no Radar</b><br>antes da divulgação"
+    },
+    "objecoes": {
+      "rotulo": "Sem letra miúda",
+      "titulo": "Ficou com <em>algum “mas”?</em>",
+      "itens": [
+        {
+          "pergunta": "“Mas esses grupos enchem o celular de mensagens...”",
+          "resposta": "Aqui só entram ofertas de carros. Sem correntes, sem conversas paralelas. Se preferir, silencie o grupo e confira quando puder.",
+          "etiqueta": "Só oferta de carro"
+        },
+        {
+          "pergunta": "“Mas vou ser abordado por vendedor toda hora...”",
+          "resposta": "Ninguém vai ligar para você sem que você peça. Quem decide quando falar comigo é você.",
+          "etiqueta": "Você no controle"
+        },
+        {
+          "pergunta": "“Mas isso não é golpe?”",
+          "resposta": "Os carros são da Seminovos Importadora, aqui em Maceió. Você vê e testa o carro pessoalmente antes de fechar qualquer coisa.",
+          "etiqueta": "Loja física em Maceió"
+        },
+        {
+          "pergunta": "“Mas o preço vai ser alto...”",
+          "resposta": "O grupo existe justamente para mostrar condições que não vão para divulgação. Você compara e decide.",
+          "etiqueta": "Condição exclusiva"
+        }
+      ]
+    },
+    "garantia": {
+      "titulo": "Entrar não te compromete com nada",
+      "itens": [
+        "Não precisa comprar.",
+        "Não precisa preencher cadastro.",
+        "Sai quando quiser, com um toque.",
+        "Todo carro pode ser visto e testado na loja antes de fechar."
+      ]
+    },
+    "urgencia": {
+      "titulo": "Nosso estoque gira rápido. <span>Quem está fora perde.</span>",
+      "texto": "O estoque da Importadora tem alta rotatividade: carro com boa condição não fica parado. Quem não está no grupo perde as melhores oportunidades."
+    },
+    "faq": {
+      "rotulo": "Dúvidas",
+      "titulo": "Perguntas <em>frequentes</em>",
+      "itens": [
+        {
+          "pergunta": "Precisa pagar para entrar?",
+          "resposta": "Não. É grátis."
+        },
+        {
+          "pergunta": "Sou obrigado a comprar?",
+          "resposta": "Não. Você acompanha as ofertas e só me chama se tiver interesse."
+        },
+        {
+          "pergunta": "Vou receber muitas mensagens?",
+          "resposta": "Só as ofertas do dia. Você pode silenciar o grupo sem perder nada."
+        },
+        {
+          "pergunta": "Atende fora de Maceió?",
+          "resposta": "Sim. O atendimento on-line é para todos, com vídeos, fotos e todas as condições de cada carro. Para ver o carro pessoalmente, apenas em Maceió."
+        }
+      ]
+    },
+    "cta_final": {
+      "selo": "Estoque novo toda semana",
+      "titulo": "Seu próximo carro pode chegar ao estoque <em>nesta semana</em>",
+      "texto": "A diferença entre vê-lo primeiro e vê-lo vendido é estar no grupo.",
+      "botao": "Quero entrar agora",
+      "garantias": [
+        "Grátis",
+        "Sem compromisso",
+        "Sai quando quiser"
+      ]
+    },
+    "ps": {
+      "texto": "<b>PS:</b> Lembra o que eu falei no vídeo? Muitos carros que entram aqui nem chegam a ser divulgados. Quem está no grupo vê primeiro. Entre, vai valer a pena.",
+      "assinatura": "Mariana Amorim"
+    },
+    "rodape": {
+      "linha_1": "<b>Seminovos Importadora</b> • Radar do Estoque da Mariana Amorim",
+      "linha_2": "Loja em Maceió/AL • Atendimento on-line para todos"
+    },
+    "barra_fixa": {
+      "titulo": "Radar do Estoque",
+      "texto": "Grátis • Sai quando quiser",
+      "botao": "Entrar no grupo"
+    }
+  },
+  "imagens": {
+    "hero_fundo": "assets/hero.jpg",
+    "cta_final_fundo": "assets/cta-final.jpg",
+    "card_hero": {
+      "src": "assets/destaque.jpg"
+    },
+    "mariana": {
+      "src": "assets/mariana.jpg",
+      "alt": "Mariana Amorim, da Seminovos Importadora"
+    },
+    "mariana_avatar": {
+      "src": "assets/mariana-avatar.jpg"
+    },
+    "estoque": {
+      "src": "assets/estoque.jpg",
+      "alt": "Volkswagen Polo vermelho recém-chegado ao estoque"
+    },
+    "oferta_celular": {
+      "src": "assets/oferta.jpg"
+    },
+    "entregas": [
+      {
+        "src": "assets/entrega-1.jpg",
+        "alt": "Mariana entregando a chave de um Chevrolet prata a uma cliente"
+      },
+      {
+        "src": "assets/entrega-2.jpg",
+        "alt": "Família ao lado da Mariana na entrega de um Renault Duster branco"
+      },
+      {
+        "src": "assets/entrega-3.jpg",
+        "alt": "Família com a Mariana no showroom da Seminovos Importadora"
+      },
+      {
+        "src": "assets/entrega-4.jpg",
+        "alt": "Mariana entregando a chave de um Volkswagen branco a um cliente"
+      },
+      {
+        "src": "assets/entrega-5.jpg",
+        "alt": "Família com a Mariana na entrega de um Volkswagen Virtus azul"
+      }
+    ]
+  }
+}

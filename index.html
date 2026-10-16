@@ -422,7 +422,7 @@
     }
     .final::before {
       content: ""; position: absolute; inset: 0; opacity: .25;
-      background: url("assets/cta-final.jpg") center 60% / cover no-repeat; z-index: 0;
+      background: var(--final-bg, url("assets/cta-final.jpg")) center 60% / cover no-repeat; z-index: 0;
     }
     .final::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21,27,39,.6), rgba(21,27,39,.95)); z-index: 0; }
     .final > * { position: relative; z-index: 1; }
@@ -564,58 +564,58 @@
     <div class="container nav__inner">
       <a class="brand" href="#topo" aria-label="Radar do Estoque, início">
         <span class="brand__mark"><svg class="icon"><use href="#i-radar"/></svg></span>
-        <span class="brand__text"><strong>Radar do Estoque</strong><small>Mariana Amorim • Seminovos Importadora</small></span>
+        <span class="brand__text"><strong><span data-c="marca.nome">Radar do Estoque</span></strong><small><span data-c="marca.subtitulo">Mariana Amorim • Seminovos Importadora</span></small></span>
       </a>
       <ul class="nav__links">
-        <li><a href="#beneficios">Benefícios</a></li>
-        <li><a href="#clientes">Clientes</a></li>
-        <li><a href="#como-funciona">Como funciona</a></li>
-        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#beneficios"><span data-c="menu.links.0">Benefícios</span></a></li>
+        <li><a href="#clientes"><span data-c="menu.links.1">Clientes</span></a></li>
+        <li><a href="#como-funciona"><span data-c="menu.links.2">Como funciona</span></a></li>
+        <li><a href="#duvidas"><span data-c="menu.links.3">Dúvidas</span></a></li>
       </ul>
-      <a class="btn nav__cta" href="#" data-cta="nav">Entrar no grupo</a>
+      <a class="btn nav__cta" href="#" data-cta="nav" data-c="menu.botao">Entrar no grupo</a>
     </div>
   </header>
 
   <main>
     <!-- ========== 1-2 HERO: headline + subheadline + CTA ========== -->
     <section class="hero" id="topo">
-      <div class="hero__bg" role="img" aria-label="Volkswagen Nivus azul"></div>
+      <div class="hero__bg" role="img" aria-label="Volkswagen Nivus azul" data-bg="hero_fundo"></div>
       <div class="container hero__content">
-        <span class="chip"><span class="chip__dot"></span><span>Radar do Estoque • <span class="chip__long">ofertas novas todo dia no WhatsApp</span><span class="chip__short">ofertas todo dia</span></span></span>
+        <span class="chip"><span class="chip__dot"></span><span>Radar do Estoque • <span class="chip__long"><span data-c="hero.selo">ofertas novas todo dia no WhatsApp</span></span><span class="chip__short"><span data-c="hero.selo_celular">ofertas todo dia</span></span></span></span>
         <h1 data-headline>Os melhores carros saem antes da divulgação</h1>
-        <p class="hero__sub">Entre no <strong>Radar do Estoque</strong>, o grupo da Mariana Amorim, e receba todo dia as ofertas da Seminovos Importadora em primeira mão, com condições especiais só para quem está no grupo.</p>
+        <p class="hero__sub" data-c="hero.subtitulo">Entre no <strong>Radar do Estoque</strong>, o grupo da Mariana Amorim, e receba todo dia as ofertas da Seminovos Importadora em primeira mão, com condições especiais só para quem está no grupo.</p>
         <div class="hero__actions">
           <a class="btn btn--primary btn--lg" href="#" data-cta="hero"><svg class="icon"><use href="#i-chat"/></svg><span data-cta-label>Quero entrar no grupo</span></a>
           <div class="microcopy">
-            <span><svg class="icon"><use href="#i-check"/></svg>Grátis</span>
-            <span><svg class="icon"><use href="#i-check"/></svg>Sem cadastro</span>
-            <span><svg class="icon"><use href="#i-check"/></svg>Sai quando quiser</span>
+            <span><svg class="icon"><use href="#i-check"/></svg><span data-c="hero.garantias.0">Grátis</span></span>
+            <span><svg class="icon"><use href="#i-check"/></svg><span data-c="hero.garantias.1">Sem cadastro</span></span>
+            <span><svg class="icon"><use href="#i-check"/></svg><span data-c="hero.garantias.2">Sai quando quiser</span></span>
           </div>
         </div>
       </div>
 
       <div class="hero__float hero__float--left glass">
-        <img src="assets/destaque.jpg" alt="" width="86" height="86">
+        <img data-img="card_hero" src="assets/destaque.jpg" alt="" width="86" height="86">
         <div>
-          <strong>Primeira mão</strong>
-          <p>O carro chega à Importadora e aparece primeiro no grupo. Só depois vai para divulgação.</p>
+          <strong><span data-c="hero.card_esquerdo.titulo">Primeira mão</span></strong>
+          <p><span data-c="hero.card_esquerdo.texto">O carro chega à Importadora e aparece primeiro no grupo. Só depois vai para divulgação.</span></p>
         </div>
       </div>
       <div class="hero__float hero__float--right glass">
-        <span class="avatar" aria-hidden="true"><img src="assets/mariana-avatar.jpg" alt="" width="80" height="80"></span>
-        <div><b>20 anos</b><small>no mercado automotivo em Maceió/AL</small></div>
+        <span class="avatar" aria-hidden="true"><img data-img="mariana_avatar" src="assets/mariana-avatar.jpg" alt="" width="80" height="80"></span>
+        <div><b><span data-c="hero.card_direito.titulo">20 anos</span></b><small><span data-c="hero.card_direito.texto">no mercado automotivo em Maceió/AL</span></small></div>
       </div>
     </section>
 
     <!-- ========== 8a PROVA SOCIAL: destaque ========== -->
     <section class="trust">
       <div class="container">
-        <p class="trust__title reveal"><b>20 anos</b> no mercado automotivo • Seminovos Importadora • Maceió/AL</p>
+        <p class="trust__title reveal" data-c="faixa.titulo"><b>20 anos</b> no mercado automotivo • Seminovos Importadora • Maceió/AL</p>
         <div class="trust__grid">
-          <div class="trust__item reveal"><svg class="icon"><use href="#i-gift"/></svg>Grátis</div>
-          <div class="trust__item reveal"><svg class="icon"><use href="#i-user"/></svg>Sem cadastro</div>
-          <div class="trust__item reveal"><svg class="icon"><use href="#i-bell"/></svg>Oferta todo dia</div>
-          <div class="trust__item reveal"><svg class="icon"><use href="#i-chat"/></svg>Atendimento on-line</div>
+          <div class="trust__item reveal"><svg class="icon"><use href="#i-gift"/></svg><span data-c="faixa.selos.0">Grátis</span></div>
+          <div class="trust__item reveal"><svg class="icon"><use href="#i-user"/></svg><span data-c="faixa.selos.1">Sem cadastro</span></div>
+          <div class="trust__item reveal"><svg class="icon"><use href="#i-bell"/></svg><span data-c="faixa.selos.2">Oferta todo dia</span></div>
+          <div class="trust__item reveal"><svg class="icon"><use href="#i-chat"/></svg><span data-c="faixa.selos.3">Atendimento on-line</span></div>
         </div>
       </div>
     </section>
@@ -625,18 +625,18 @@
       <div class="container">
         <div class="intro reveal">
           <div class="photo-slot">
-            <img src="assets/mariana.jpg" alt="Mariana Amorim, da Seminovos Importadora" loading="lazy" width="853" height="1280">
-            <div class="photo-slot__tag glass"><b>Mariana Amorim</b>Seminovos Importadora</div>
+            <img data-img="mariana" src="assets/mariana.jpg" alt="Mariana Amorim, da Seminovos Importadora" loading="lazy" width="853" height="1280">
+            <div class="photo-slot__tag glass"><b><span data-c="abertura.foto_nome">Mariana Amorim</span></b><span data-c="abertura.foto_legenda">Seminovos Importadora</span></div>
           </div>
           <div class="intro__text">
-            <span class="eyebrow">Oi, eu sou a Mariana</span>
-            <h2 class="h-display">O carro bom <em>não espera</em></h2>
-            <p>Há <strong>20 anos</strong> eu trabalho com carros e aprendi uma coisa: carro bom não espera.</p>
-            <p>Muitos dos seminovos que chegam aqui na Importadora são <strong>vendidos antes mesmo de irem para divulgação</strong>. Quem leva é quem fica sabendo primeiro.</p>
-            <p>Por isso eu criei o <strong>Radar do Estoque</strong>, um grupo no WhatsApp. Chegou carro no estoque, você vê ali <strong>antes de todo mundo</strong>, já com as condições do grupo.</p>
+            <span class="eyebrow"><span data-c="abertura.rotulo">Oi, eu sou a Mariana</span></span>
+            <h2 class="h-display" data-c="abertura.titulo">O carro bom <em>não espera</em></h2>
+            <p data-c="abertura.paragrafos.0">Há <strong>20 anos</strong> eu trabalho com carros e aprendi uma coisa: carro bom não espera.</p>
+            <p data-c="abertura.paragrafos.1">Muitos dos seminovos que chegam aqui na Importadora são <strong>vendidos antes mesmo de irem para divulgação</strong>. Quem leva é quem fica sabendo primeiro.</p>
+            <p data-c="abertura.paragrafos.2">Por isso eu criei o <strong>Radar do Estoque</strong>, um grupo no WhatsApp. Chegou carro no estoque, você vê ali <strong>antes de todo mundo</strong>, já com as condições do grupo.</p>
             <div class="intro__actions">
               <a class="btn btn--primary" href="#" data-cta="abertura"><span data-cta-label>Quero entrar no grupo</span><svg class="icon"><use href="#i-arrow-right"/></svg></a>
-              <a class="btn btn--ghost" href="#como-funciona">Como funciona</a>
+              <a class="btn btn--ghost" href="#como-funciona"><span data-c="abertura.botao_secundario">Como funciona</span></a>
             </div>
           </div>
         </div>
@@ -648,25 +648,25 @@
       <span class="dots" style="right:6%;top:60px" aria-hidden="true"></span>
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Soa familiar?</span>
-          <h2 class="h-display">Quem procura carro em Maceió <em>conhece essa história</em></h2>
+          <span class="eyebrow"><span data-c="dor.rotulo">Soa familiar?</span></span>
+          <h2 class="h-display" data-c="dor.titulo">Quem procura carro em Maceió <em>conhece essa história</em></h2>
         </div>
         <div class="pain__grid">
           <article class="pain__card reveal">
             <span class="pain__icon"><svg class="icon"><use href="#i-x"/></svg></span>
-            <p>Você vê o anúncio, chama o vendedor e a resposta é <em>“esse já foi vendido”</em>.</p>
+            <p data-c="dor.itens.0">Você vê o anúncio, chama o vendedor e a resposta é <em>“esse já foi vendido”</em>.</p>
           </article>
           <article class="pain__card reveal">
             <span class="pain__icon"><svg class="icon"><use href="#i-search"/></svg></span>
-            <p>Passa dias procurando em sites e no Instagram e só encontra carros caros ou rodados demais.</p>
+            <p data-c="dor.itens.1">Passa dias procurando em sites e no Instagram e só encontra carros caros ou rodados demais.</p>
           </article>
           <article class="pain__card reveal">
             <span class="pain__icon"><svg class="icon"><use href="#i-shield-alert"/></svg></span>
-            <p>Quer comprar com segurança, mas tem medo de cair numa roubada.</p>
+            <p data-c="dor.itens.2">Quer comprar com segurança, mas tem medo de cair numa roubada.</p>
           </article>
           <article class="pain__card reveal">
             <span class="pain__icon"><svg class="icon"><use href="#i-clock"/></svg></span>
-            <p>Não tem tempo de ficar indo de loja em loja.</p>
+            <p data-c="dor.itens.3">Não tem tempo de ficar indo de loja em loja.</p>
           </article>
         </div>
       </div>
@@ -676,49 +676,49 @@
     <section class="section" id="beneficios">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">A solução</span>
-          <h2 class="h-display">Radar do Estoque <em>da Mariana</em></h2>
-          <p class="lead">O carro chega à Importadora e aparece primeiro no grupo. Só depois vai para divulgação.</p>
+          <span class="eyebrow"><span data-c="solucao.rotulo">A solução</span></span>
+          <h2 class="h-display" data-c="solucao.titulo">Radar do Estoque <em>da Mariana</em></h2>
+          <p class="lead" data-c="solucao.subtitulo">O carro chega à Importadora e aparece primeiro no grupo. Só depois vai para divulgação.</p>
         </div>
 
         <div class="solution__grid">
           <div class="solution__visual reveal">
             <span class="solution__ring" aria-hidden="true"></span>
-            <img src="assets/estoque.jpg" alt="Volkswagen Polo vermelho recém-chegado ao estoque" loading="lazy" width="1000" height="663">
+            <img data-img="estoque" src="assets/estoque.jpg" alt="Volkswagen Polo vermelho recém-chegado ao estoque" loading="lazy" width="1000" height="663">
             <div class="solution__badge">
               <span class="pain__icon"><svg class="icon"><use href="#i-zap"/></svg></span>
-              <div><b>Chegou no estoque?</b><small>Aparece no grupo primeiro</small></div>
+              <div><b><span data-c="solucao.selo_1.titulo">Chegou no estoque?</span></b><small><span data-c="solucao.selo_1.texto">Aparece no grupo primeiro</span></small></div>
             </div>
             <div class="solution__badge solution__badge2">
               <span class="pain__icon"><svg class="icon"><use href="#i-phone"/></svg></span>
-              <div><b>Todo dia no celular</b><small>Com fotos, informações e condições</small></div>
+              <div><b><span data-c="solucao.selo_2.titulo">Todo dia no celular</span></b><small><span data-c="solucao.selo_2.texto">Com fotos, informações e condições</span></small></div>
             </div>
           </div>
 
           <div>
             <div class="solution__intro reveal">
-              <p>Você não precisa ficar garimpando: aqui as ofertas chegam todos os dias no seu celular. Fotos, informações sobre os carros e condições exclusivas.</p>
+              <p data-c="solucao.texto">Você não precisa ficar garimpando: aqui as ofertas chegam todos os dias no seu celular. Fotos, informações sobre os carros e condições exclusivas.</p>
             </div>
             <ul class="benefits">
               <li class="benefit is-featured reveal">
                 <span class="benefit__icon"><svg class="icon"><use href="#i-clock"/></svg></span>
-                <div><h3>Você vê o carro antes de ele virar disputa</h3><p>Chega primeiro, escolhe com calma.</p></div>
+                <div><h3><span data-c="solucao.beneficios.0.titulo">Você vê o carro antes de ele virar disputa</span></h3><p><span data-c="solucao.beneficios.0.texto">Chega primeiro, escolhe com calma.</span></p></div>
               </li>
               <li class="benefit reveal">
                 <span class="benefit__icon"><svg class="icon"><use href="#i-tag"/></svg></span>
-                <div><h3>Condições que não aparecem na divulgação</h3><p>Quem está no grupo tem vantagem.</p></div>
+                <div><h3><span data-c="solucao.beneficios.1.titulo">Condições que não aparecem na divulgação</span></h3><p><span data-c="solucao.beneficios.1.texto">Quem está no grupo tem vantagem.</span></p></div>
               </li>
               <li class="benefit reveal">
                 <span class="benefit__icon"><svg class="icon"><use href="#i-phone"/></svg></span>
-                <div><h3>Oferta todo dia no seu celular</h3><p>Basta abrir o WhatsApp.</p></div>
+                <div><h3><span data-c="solucao.beneficios.2.titulo">Oferta todo dia no seu celular</span></h3><p><span data-c="solucao.beneficios.2.texto">Basta abrir o WhatsApp.</span></p></div>
               </li>
               <li class="benefit reveal">
                 <span class="benefit__icon"><svg class="icon"><use href="#i-user"/></svg></span>
-                <div><h3>Você fala com uma pessoa, não com uma loja</h3><p>A Mariana atende você diretamente.</p></div>
+                <div><h3><span data-c="solucao.beneficios.3.titulo">Você fala com uma pessoa, não com uma loja</span></h3><p><span data-c="solucao.beneficios.3.texto">A Mariana atende você diretamente.</span></p></div>
               </li>
               <li class="benefit reveal">
                 <span class="benefit__icon"><svg class="icon"><use href="#i-award"/></svg></span>
-                <div><h3>20 anos de experiência do seu lado</h3><p>Sem a insegurança de comprar com um desconhecido.</p></div>
+                <div><h3><span data-c="solucao.beneficios.4.titulo">20 anos de experiência do seu lado</span></h3><p><span data-c="solucao.beneficios.4.texto">Sem a insegurança de comprar com um desconhecido.</span></p></div>
               </li>
             </ul>
           </div>
@@ -731,24 +731,24 @@
       <span class="dots" style="left:4%;bottom:50px" aria-hidden="true"></span>
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Por que confiar</span>
-          <h2 class="h-display">Quem escolhe os carros <em>do grupo</em></h2>
+          <span class="eyebrow"><span data-c="autoridade.rotulo">Por que confiar</span></span>
+          <h2 class="h-display" data-c="autoridade.titulo">Quem escolhe os carros <em>do grupo</em></h2>
         </div>
         <div class="authority">
           <div class="authority__stat reveal">
-            <div class="authority__num">20<span>anos</span></div>
-            <p>de atuação no mercado automotivo, com curadoria criteriosa de seminovos</p>
+            <div class="authority__num" data-c="autoridade.numero">20<span>anos</span></div>
+            <p><span data-c="autoridade.numero_texto">de atuação no mercado automotivo, com curadoria criteriosa de seminovos</span></p>
           </div>
           <div class="authority__card reveal">
-            <p class="authority__quote">São 20 anos de experiência no mercado automotivo. Sei reconhecer um bom negócio e identificar o que não vale a pena. É essa curadoria que eu levo para o grupo.</p>
+            <p class="authority__quote"><span data-c="autoridade.citacao">São 20 anos de experiência no mercado automotivo. Sei reconhecer um bom negócio e identificar o que não vale a pena. É essa curadoria que eu levo para o grupo.</span></p>
             <div class="authority__who">
-              <span class="avatar"><img src="assets/mariana-avatar.jpg" alt="" width="80" height="80"></span>
-              <div><b>Mariana Amorim</b><small>Seminovos Importadora</small></div>
+              <span class="avatar"><img data-img="mariana_avatar" src="assets/mariana-avatar.jpg" alt="" width="80" height="80"></span>
+              <div><b><span data-c="autoridade.nome">Mariana Amorim</span></b><small><span data-c="autoridade.cargo">Seminovos Importadora</span></small></div>
             </div>
             <div class="tags">
-              <span class="tag">20 anos no mercado automotivo</span>
-              <span class="tag">Seminovos Importadora</span>
-              <span class="tag">Maceió/AL</span>
+              <span class="tag"><span data-c="autoridade.etiquetas.0">20 anos no mercado automotivo</span></span>
+              <span class="tag"><span data-c="autoridade.etiquetas.1">Seminovos Importadora</span></span>
+              <span class="tag"><span data-c="autoridade.etiquetas.2">Maceió/AL</span></span>
             </div>
           </div>
         </div>
@@ -759,35 +759,35 @@
     <section class="section" id="clientes">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Quem já comprou</span>
-          <h2 class="h-display">Quem saiu daqui <em>com o carro certo</em></h2>
-          <p class="lead">Algumas das entregas feitas pela Mariana na Seminovos Importadora.</p>
+          <span class="eyebrow"><span data-c="clientes.rotulo">Quem já comprou</span></span>
+          <h2 class="h-display" data-c="clientes.titulo">Quem saiu daqui <em>com o carro certo</em></h2>
+          <p class="lead" data-c="clientes.subtitulo">Algumas das entregas feitas pela Mariana na Seminovos Importadora.</p>
         </div>
         <div class="gallery">
           <figure class="gallery__item g1 reveal">
-            <img src="assets/entrega-1.jpg" alt="Mariana entregando a chave de um Chevrolet prata a uma cliente" loading="lazy">
-            <figcaption><svg class="icon"><use href="#i-check"/></svg>Entrega realizada</figcaption>
+            <img data-img="entregas.0" src="assets/entrega-1.jpg" alt="Mariana entregando a chave de um Chevrolet prata a uma cliente" loading="lazy">
+            <figcaption><svg class="icon"><use href="#i-check"/></svg><span data-c="clientes.legenda_fotos.0">Entrega realizada</span></figcaption>
           </figure>
           <figure class="gallery__item g2 reveal">
-            <img src="assets/entrega-2.jpg" alt="Família ao lado da Mariana na entrega de um Renault Duster branco" loading="lazy">
-            <figcaption><svg class="icon"><use href="#i-check"/></svg>Entrega realizada</figcaption>
+            <img data-img="entregas.1" src="assets/entrega-2.jpg" alt="Família ao lado da Mariana na entrega de um Renault Duster branco" loading="lazy">
+            <figcaption><svg class="icon"><use href="#i-check"/></svg><span data-c="clientes.legenda_fotos.1">Entrega realizada</span></figcaption>
           </figure>
           <figure class="gallery__item g3 reveal">
-            <img src="assets/entrega-3.jpg" alt="Família com a Mariana no showroom da Seminovos Importadora" loading="lazy">
-            <figcaption><svg class="icon"><use href="#i-check"/></svg>Entrega realizada</figcaption>
+            <img data-img="entregas.2" src="assets/entrega-3.jpg" alt="Família com a Mariana no showroom da Seminovos Importadora" loading="lazy">
+            <figcaption><svg class="icon"><use href="#i-check"/></svg><span data-c="clientes.legenda_fotos.2">Entrega realizada</span></figcaption>
           </figure>
           <figure class="gallery__item g4 reveal">
-            <img src="assets/entrega-4.jpg" alt="Mariana entregando a chave de um Volkswagen branco a um cliente" loading="lazy">
-            <figcaption><svg class="icon"><use href="#i-check"/></svg>Entrega realizada</figcaption>
+            <img data-img="entregas.3" src="assets/entrega-4.jpg" alt="Mariana entregando a chave de um Volkswagen branco a um cliente" loading="lazy">
+            <figcaption><svg class="icon"><use href="#i-check"/></svg><span data-c="clientes.legenda_fotos.3">Entrega realizada</span></figcaption>
           </figure>
           <figure class="gallery__item g5 reveal">
-            <img src="assets/entrega-5.jpg" alt="Família com a Mariana na entrega de um Volkswagen Virtus azul" loading="lazy">
-            <figcaption><svg class="icon"><use href="#i-check"/></svg>Entrega realizada</figcaption>
+            <img data-img="entregas.4" src="assets/entrega-5.jpg" alt="Família com a Mariana na entrega de um Volkswagen Virtus azul" loading="lazy">
+            <figcaption><svg class="icon"><use href="#i-check"/></svg><span data-c="clientes.legenda_fotos.4">Entrega realizada</span></figcaption>
           </figure>
         </div>
         <div class="gallery__cta reveal">
-          <p>O próximo carro com laço pode ser o seu.</p>
-          <a class="btn btn--primary" href="#" data-cta="clientes"><svg class="icon"><use href="#i-chat"/></svg>Quero ver os carros primeiro</a>
+          <p><span data-c="clientes.chamada">O próximo carro com laço pode ser o seu.</span></p>
+          <a class="btn btn--primary" href="#" data-cta="clientes"><svg class="icon"><use href="#i-chat"/></svg><span data-c="clientes.botao">Quero ver os carros primeiro</span></a>
         </div>
       </div>
     </section>
@@ -796,33 +796,33 @@
     <section class="section section--dark offer" id="como-funciona">
       <div class="container offer__grid">
         <div class="offer__text">
-          <span class="eyebrow reveal">O que você recebe</span>
-          <h2 class="h-display reveal">No Radar <em>você recebe</em></h2>
+          <span class="eyebrow reveal"><span data-c="oferta.rotulo">O que você recebe</span></span>
+          <h2 class="h-display reveal" data-c="oferta.titulo">No Radar <em>você recebe</em></h2>
           <ul class="checklist reveal">
-            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Ofertas diárias de seminovos</li>
-            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Carros do estoque antes da divulgação</li>
-            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Condições especiais exclusivas para membros</li>
-            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Atendimento direto comigo para tirar dúvidas</li>
+            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span><span data-c="oferta.itens.0">Ofertas diárias de seminovos</span></li>
+            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span><span data-c="oferta.itens.1">Carros do estoque antes da divulgação</span></li>
+            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span><span data-c="oferta.itens.2">Condições especiais exclusivas para membros</span></li>
+            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span><span data-c="oferta.itens.3">Atendimento direto comigo para tirar dúvidas</span></li>
           </ul>
 
-          <h3 class="reveal" style="font-size:18px;text-transform:uppercase;letter-spacing:.04em">Como funciona</h3>
+          <h3 class="reveal" style="font-size:18px;text-transform:uppercase;letter-spacing:.04em"><span data-c="oferta.como_funciona_titulo">Como funciona</span></h3>
           <ol class="steps reveal">
-            <li>Você toca no botão e entra no grupo.</li>
-            <li>Recebe as ofertas todo dia.</li>
-            <li>Gostou de um carro? Me chame no privado.</li>
+            <li><span data-c="oferta.passos.0">Você toca no botão e entra no grupo.</span></li>
+            <li><span data-c="oferta.passos.1">Recebe as ofertas todo dia.</span></li>
+            <li><span data-c="oferta.passos.2">Gostou de um carro? Me chame no privado.</span></li>
           </ol>
 
           <div class="price reveal">
-            <b>Quanto custa: <span>nada.</span></b>
-            <p>O que custa caro é ficar de fora: ver o carro que você queria vendido para outra pessoa.</p>
+            <b data-c="oferta.preco">Quanto custa: <span>nada.</span></b>
+            <p><span data-c="oferta.preco_texto">O que custa caro é ficar de fora: ver o carro que você queria vendido para outra pessoa.</span></p>
           </div>
 
           <div class="offer__cta reveal">
-            <a class="btn btn--primary btn--lg" href="#" data-cta="oferta"><svg class="icon"><use href="#i-chat"/></svg>Ver os carros primeiro</a>
+            <a class="btn btn--primary btn--lg" href="#" data-cta="oferta"><svg class="icon"><use href="#i-chat"/></svg><span data-c="oferta.botao">Ver os carros primeiro</span></a>
             <div class="microcopy">
-              <span><svg class="icon"><use href="#i-check"/></svg>Grátis</span>
-              <span><svg class="icon"><use href="#i-check"/></svg>Sem cadastro</span>
-              <span><svg class="icon"><use href="#i-check"/></svg>Sai quando quiser</span>
+              <span><svg class="icon"><use href="#i-check"/></svg><span data-c="oferta.garantias.0">Grátis</span></span>
+              <span><svg class="icon"><use href="#i-check"/></svg><span data-c="oferta.garantias.1">Sem cadastro</span></span>
+              <span><svg class="icon"><use href="#i-check"/></svg><span data-c="oferta.garantias.2">Sai quando quiser</span></span>
             </div>
           </div>
         </div>
@@ -831,25 +831,25 @@
           <div class="phone" aria-hidden="true">
             <div class="phone__screen">
               <div class="phone__bar">
-                <span class="avatar" aria-hidden="true"><img src="assets/mariana-avatar.jpg" alt="" width="80" height="80"></span>
-                <div><b>Radar do Estoque</b><small>Mariana Amorim • Importadora</small></div>
+                <span class="avatar" aria-hidden="true"><img data-img="mariana_avatar" src="assets/mariana-avatar.jpg" alt="" width="80" height="80"></span>
+                <div><b><span data-c="celular.grupo_nome">Radar do Estoque</span></b><small><span data-c="celular.grupo_info">Mariana Amorim • Importadora</span></small></div>
               </div>
               <div class="phone__chat">
                 <div class="bubble">
                   <div class="bubble__name">Mariana Amorim</div>
-                  Bom dia, grupo! Chegou hoje no estoque 👇
+                  <span data-c="celular.mensagens.0">Bom dia, grupo! Chegou hoje no estoque 👇</span>
                   <div class="bubble__time">08:02</div>
                 </div>
                 <div class="bubble">
                   <div class="bubble__name">Mariana Amorim</div>
-                  <img src="assets/oferta.jpg" alt="" loading="lazy">
-                  Ainda não foi para divulgação. Fotos e informações completas aqui.
-                  <span class="bubble__pill">Condição exclusiva do grupo</span>
+                  <img data-img="oferta_celular" src="assets/oferta.jpg" alt="" loading="lazy">
+                  <span data-c="celular.mensagens.1">Ainda não foi para divulgação. Fotos e informações completas aqui.</span>
+                  <span class="bubble__pill"><span data-c="celular.etiqueta_oferta">Condição exclusiva do grupo</span></span>
                   <div class="bubble__time">08:03</div>
                 </div>
                 <div class="bubble">
                   <div class="bubble__name">Mariana Amorim</div>
-                  Interessou? Me chame no privado.
+                  <span data-c="celular.mensagens.2">Interessou? Me chame no privado.</span>
                   <div class="bubble__time">08:03</div>
                 </div>
               </div>
@@ -857,7 +857,7 @@
           </div>
           <div class="phone__notif" aria-hidden="true">
             <span class="benefit__icon"><svg class="icon"><use href="#i-bell"/></svg></span>
-            <span><b>Nova oferta no Radar</b><br>antes da divulgação</span>
+            <span data-c="celular.notificacao"><b>Nova oferta no Radar</b><br>antes da divulgação</span>
           </div>
         </div>
       </div>
@@ -868,8 +868,8 @@
       <div class="container">
         <div class="objections__head">
           <div class="objections__title reveal">
-            <span class="eyebrow">Sem letra miúda</span>
-            <h2 class="h-display">Ficou com <em>algum “mas”?</em></h2>
+            <span class="eyebrow"><span data-c="objecoes.rotulo">Sem letra miúda</span></span>
+            <h2 class="h-display" data-c="objecoes.titulo">Ficou com <em>algum “mas”?</em></h2>
           </div>
           <div class="slider__nav reveal">
             <button class="slider__btn" type="button" data-slide="-1" aria-label="Anterior"><svg class="icon"><use href="#i-arrow-left"/></svg></button>
@@ -879,31 +879,31 @@
 
         <div class="slider" data-slider>
           <article class="objection">
-            <p class="objection__q">“Mas esses grupos enchem o celular de mensagens...”</p>
+            <p class="objection__q"><span data-c="objecoes.itens.0.pergunta">“Mas esses grupos enchem o celular de mensagens...”</span></p>
             <div class="objection__a">
-              <p>Aqui só entram ofertas de carros. Sem correntes, sem conversas paralelas. Se preferir, silencie o grupo e confira quando puder.</p>
-              <span class="tag">Só oferta de carro</span>
+              <p><span data-c="objecoes.itens.0.resposta">Aqui só entram ofertas de carros. Sem correntes, sem conversas paralelas. Se preferir, silencie o grupo e confira quando puder.</span></p>
+              <span class="tag"><span data-c="objecoes.itens.0.etiqueta">Só oferta de carro</span></span>
             </div>
           </article>
           <article class="objection">
-            <p class="objection__q">“Mas vou ser abordado por vendedor toda hora...”</p>
+            <p class="objection__q"><span data-c="objecoes.itens.1.pergunta">“Mas vou ser abordado por vendedor toda hora...”</span></p>
             <div class="objection__a">
-              <p>Ninguém vai ligar para você sem que você peça. Quem decide quando falar comigo é você.</p>
-              <span class="tag">Você no controle</span>
+              <p><span data-c="objecoes.itens.1.resposta">Ninguém vai ligar para você sem que você peça. Quem decide quando falar comigo é você.</span></p>
+              <span class="tag"><span data-c="objecoes.itens.1.etiqueta">Você no controle</span></span>
             </div>
           </article>
           <article class="objection">
-            <p class="objection__q">“Mas isso não é golpe?”</p>
+            <p class="objection__q"><span data-c="objecoes.itens.2.pergunta">“Mas isso não é golpe?”</span></p>
             <div class="objection__a">
-              <p>Os carros são da Seminovos Importadora, aqui em Maceió. Você vê e testa o carro pessoalmente antes de fechar qualquer coisa.</p>
-              <span class="tag">Loja física em Maceió</span>
+              <p><span data-c="objecoes.itens.2.resposta">Os carros são da Seminovos Importadora, aqui em Maceió. Você vê e testa o carro pessoalmente antes de fechar qualquer coisa.</span></p>
+              <span class="tag"><span data-c="objecoes.itens.2.etiqueta">Loja física em Maceió</span></span>
             </div>
           </article>
           <article class="objection">
-            <p class="objection__q">“Mas o preço vai ser alto...”</p>
+            <p class="objection__q"><span data-c="objecoes.itens.3.pergunta">“Mas o preço vai ser alto...”</span></p>
             <div class="objection__a">
-              <p>O grupo existe justamente para mostrar condições que não vão para divulgação. Você compara e decide.</p>
-              <span class="tag">Condição exclusiva</span>
+              <p><span data-c="objecoes.itens.3.resposta">O grupo existe justamente para mostrar condições que não vão para divulgação. Você compara e decide.</span></p>
+              <span class="tag"><span data-c="objecoes.itens.3.etiqueta">Condição exclusiva</span></span>
             </div>
           </article>
         </div>
@@ -915,18 +915,18 @@
       <div class="container safe">
         <div class="safe__card safe__card--light reveal">
           <span class="pain__icon"><svg class="icon"><use href="#i-shield"/></svg></span>
-          <h3>Entrar não te compromete com nada</h3>
+          <h3><span data-c="garantia.titulo">Entrar não te compromete com nada</span></h3>
           <ul class="checklist">
-            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Não precisa comprar.</li>
-            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Não precisa preencher cadastro.</li>
-            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Sai quando quiser, com um toque.</li>
-            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span>Todo carro pode ser visto e testado na loja antes de fechar.</li>
+            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span><span data-c="garantia.itens.0">Não precisa comprar.</span></li>
+            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span><span data-c="garantia.itens.1">Não precisa preencher cadastro.</span></li>
+            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span><span data-c="garantia.itens.2">Sai quando quiser, com um toque.</span></li>
+            <li><span class="tick"><svg class="icon"><use href="#i-check"/></svg></span><span data-c="garantia.itens.3">Todo carro pode ser visto e testado na loja antes de fechar.</span></li>
           </ul>
         </div>
         <div class="safe__card safe__card--dark reveal">
           <span class="pain__icon" style="background:rgba(251,176,59,.18)"><svg class="icon"><use href="#i-zap"/></svg></span>
-          <p class="safe__big">Nosso estoque gira rápido. <span>Quem está fora perde.</span></p>
-          <p>O estoque da Importadora tem alta rotatividade: carro com boa condição não fica parado. Quem não está no grupo perde as melhores oportunidades.</p>
+          <p class="safe__big" data-c="urgencia.titulo">Nosso estoque gira rápido. <span>Quem está fora perde.</span></p>
+          <p><span data-c="urgencia.texto">O estoque da Importadora tem alta rotatividade: carro com boa condição não fica parado. Quem não está no grupo perde as melhores oportunidades.</span></p>
           <a class="btn btn--primary" href="#" data-cta="urgencia" style="position:relative;z-index:1;justify-self:start"><span data-cta-label>Quero entrar no grupo</span><svg class="icon"><use href="#i-arrow-right"/></svg></a>
         </div>
       </div>
@@ -936,25 +936,25 @@
     <section class="section" id="duvidas">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Dúvidas</span>
-          <h2 class="h-display">Perguntas <em>frequentes</em></h2>
+          <span class="eyebrow"><span data-c="faq.rotulo">Dúvidas</span></span>
+          <h2 class="h-display" data-c="faq.titulo">Perguntas <em>frequentes</em></h2>
         </div>
         <div class="faq">
           <details class="reveal" open>
-            <summary>Precisa pagar para entrar?<span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
-            <p>Não. É grátis.</p>
+            <summary><span data-c="faq.itens.0.pergunta">Precisa pagar para entrar?</span><span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p><span data-c="faq.itens.0.resposta">Não. É grátis.</span></p>
           </details>
           <details class="reveal">
-            <summary>Sou obrigado a comprar?<span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
-            <p>Não. Você acompanha as ofertas e só me chama se tiver interesse.</p>
+            <summary><span data-c="faq.itens.1.pergunta">Sou obrigado a comprar?</span><span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p><span data-c="faq.itens.1.resposta">Não. Você acompanha as ofertas e só me chama se tiver interesse.</span></p>
           </details>
           <details class="reveal">
-            <summary>Vou receber muitas mensagens?<span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
-            <p>Só as ofertas do dia. Você pode silenciar o grupo sem perder nada.</p>
+            <summary><span data-c="faq.itens.2.pergunta">Vou receber muitas mensagens?</span><span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p><span data-c="faq.itens.2.resposta">Só as ofertas do dia. Você pode silenciar o grupo sem perder nada.</span></p>
           </details>
           <details class="reveal">
-            <summary>Atende fora de Maceió?<span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
-            <p>Sim. O atendimento on-line é para todos, com vídeos, fotos e todas as condições de cada carro. Para ver o carro pessoalmente, apenas em Maceió.</p>
+            <summary><span data-c="faq.itens.3.pergunta">Atende fora de Maceió?</span><span class="plus"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p><span data-c="faq.itens.3.resposta">Sim. O atendimento on-line é para todos, com vídeos, fotos e todas as condições de cada carro. Para ver o carro pessoalmente, apenas em Maceió.</span></p>
           </details>
         </div>
       </div>
@@ -964,39 +964,41 @@
     <section class="section" style="padding-top:0">
       <div class="container">
         <div class="final reveal">
-          <span class="chip"><span class="chip__dot"></span>Estoque novo toda semana</span>
-          <h2 class="h-display">Seu próximo carro pode chegar ao estoque <em>nesta semana</em></h2>
-          <p class="lead">A diferença entre vê-lo primeiro e vê-lo vendido é estar no grupo.</p>
-          <a class="btn btn--primary btn--lg" href="#" data-cta="final"><svg class="icon"><use href="#i-chat"/></svg>Quero entrar agora</a>
+          <span class="chip"><span class="chip__dot"></span><span data-c="cta_final.selo">Estoque novo toda semana</span></span>
+          <h2 class="h-display" data-c="cta_final.titulo">Seu próximo carro pode chegar ao estoque <em>nesta semana</em></h2>
+          <p class="lead" data-c="cta_final.texto">A diferença entre vê-lo primeiro e vê-lo vendido é estar no grupo.</p>
+          <a class="btn btn--primary btn--lg" href="#" data-cta="final"><svg class="icon"><use href="#i-chat"/></svg><span data-c="cta_final.botao">Quero entrar agora</span></a>
           <div class="microcopy">
-            <span><svg class="icon"><use href="#i-check"/></svg>Grátis</span>
-            <span><svg class="icon"><use href="#i-check"/></svg>Sem compromisso</span>
-            <span><svg class="icon"><use href="#i-check"/></svg>Sai quando quiser</span>
+            <span><svg class="icon"><use href="#i-check"/></svg><span data-c="cta_final.garantias.0">Grátis</span></span>
+            <span><svg class="icon"><use href="#i-check"/></svg><span data-c="cta_final.garantias.1">Sem compromisso</span></span>
+            <span><svg class="icon"><use href="#i-check"/></svg><span data-c="cta_final.garantias.2">Sai quando quiser</span></span>
           </div>
         </div>
 
         <aside class="ps reveal">
-          <p><b>PS:</b> Lembra o que eu falei no vídeo? Muitos carros que entram aqui nem chegam a ser divulgados. Quem está no grupo vê primeiro. Entre, vai valer a pena.</p>
-          <span class="ps__sign">Mariana Amorim</span>
+          <p data-c="ps.texto"><b>PS:</b> Lembra o que eu falei no vídeo? Muitos carros que entram aqui nem chegam a ser divulgados. Quem está no grupo vê primeiro. Entre, vai valer a pena.</p>
+          <span class="ps__sign"><span data-c="ps.assinatura">Mariana Amorim</span></span>
         </aside>
       </div>
     </section>
   </main>
 
   <footer class="footer container">
-    <p><b>Seminovos Importadora</b> • Radar do Estoque da Mariana Amorim</p>
-    <p><svg class="icon" style="width:14px;height:14px;vertical-align:-2px;color:var(--accent-ink)"><use href="#i-pin"/></svg> Loja em Maceió/AL • Atendimento on-line para todos</p>
+    <p data-c="rodape.linha_1"><b>Seminovos Importadora</b> • Radar do Estoque da Mariana Amorim</p>
+    <p><svg class="icon" style="width:14px;height:14px;vertical-align:-2px;color:var(--accent-ink)"><use href="#i-pin"/></svg> <span data-c="rodape.linha_2">Loja em Maceió/AL • Atendimento on-line para todos</span></p>
   </footer>
 
   <!-- Barra fixa (mobile) -->
   <div class="sticky-cta" data-sticky>
-    <small><b>Radar do Estoque</b>Grátis • Sai quando quiser</small>
-    <a class="btn btn--primary" href="#" data-cta="sticky">Entrar no grupo</a>
+    <small><b><span data-c="barra_fixa.titulo">Radar do Estoque</span></b><span data-c="barra_fixa.texto">Grátis • Sai quando quiser</span></small>
+    <a class="btn btn--primary" href="#" data-cta="sticky"><span data-c="barra_fixa.botao">Entrar no grupo</span></a>
   </div>
 
   <script>
     /* =========================================================
        CONFIGURAÇÃO: troque pelo link de convite do grupo
+       Com a página publicada, textos, link e imagens vêm do
+       content.json (que tem prioridade sobre os valores abaixo)
        ========================================================= */
     var WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/DXF3MaIjAjj9NhRT1Im30z";
 
@@ -1017,14 +1019,17 @@
       var h = (params.get("h") || "a").toLowerCase();
       var cta = params.get("cta") || "1";
       var headline = document.querySelector("[data-headline]");
-      if (HEADLINES[h] && headline) headline.textContent = HEADLINES[h];
-      if (CTA_LABELS[cta]) {
-        document.querySelectorAll("[data-cta-label]").forEach(function (el) { el.textContent = CTA_LABELS[cta]; });
+      function applyVariants() {
+        if (HEADLINES[h] && headline) headline.textContent = HEADLINES[h];
+        if (CTA_LABELS[cta]) {
+          document.querySelectorAll("[data-cta-label]").forEach(function (el) { el.textContent = CTA_LABELS[cta]; });
+        }
+        document.querySelectorAll("[data-cta]").forEach(function (a) { a.href = WHATSAPP_GROUP_URL; });
       }
+      applyVariants();
 
       // Links dos CTAs + rastreamento (Meta Pixel / GA4, se instalados)
       document.querySelectorAll("[data-cta]").forEach(function (a) {
-        a.href = WHATSAPP_GROUP_URL;
         a.target = "_blank";
         a.rel = "noopener";
         a.addEventListener("click", function () {
@@ -1076,6 +1081,46 @@
       slider.addEventListener("scroll", syncBtns, { passive: true });
       window.addEventListener("resize", syncBtns);
       syncBtns();
+
+      // Conteúdo editável: content.json (sem ele, ficam os textos do HTML)
+      function pick(obj, path) {
+        return path.split(".").reduce(function (o, k) { return o == null ? o : o[k]; }, obj);
+      }
+      function applyContent(c) {
+        var cfg = c.config || {};
+        if (cfg.whatsapp_grupo) WHATSAPP_GROUP_URL = cfg.whatsapp_grupo;
+        if (cfg.headlines) HEADLINES = cfg.headlines;
+        if (cfg.botao_principal) CTA_LABELS = cfg.botao_principal;
+        if (c.seo) {
+          if (c.seo.titulo) document.title = c.seo.titulo;
+          var desc = document.querySelector('meta[name="description"]');
+          if (c.seo.descricao && desc) desc.setAttribute("content", c.seo.descricao);
+        }
+        if (c.textos) {
+          document.querySelectorAll("[data-c]").forEach(function (el) {
+            var v = pick(c.textos, el.getAttribute("data-c"));
+            if (typeof v === "string") el.innerHTML = v;
+          });
+        }
+        var img = c.imagens || {};
+        document.querySelectorAll("[data-img]").forEach(function (el) {
+          var v = pick(img, el.getAttribute("data-img"));
+          if (!v) return;
+          if (v.src) el.src = v.src;
+          if (typeof v.alt === "string" && el.getAttribute("alt") !== "") el.alt = v.alt;
+        });
+        var bg = document.querySelector("[data-bg]");
+        if (bg && img.hero_fundo) bg.style.backgroundImage = 'url("' + img.hero_fundo + '")';
+        if (finalBox && img.cta_final_fundo) finalBox.style.setProperty("--final-bg", 'url("' + img.cta_final_fundo + '")');
+        applyVariants();
+        syncBtns();
+      }
+      if (window.fetch && location.protocol !== "file:") {
+        fetch("content.json", { cache: "no-cache" })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (c) { if (c) applyContent(c); })
+          .catch(function () {});
+      }
     })();
   </script>
 </body>
