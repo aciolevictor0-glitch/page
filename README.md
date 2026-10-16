@@ -8,7 +8,7 @@ Página única (`index.html`), sem build. Basta subir a pasta em qualquer hosped
 2. **Foto da Mariana**: `assets/mariana.jpg` (bloco de abertura) e `assets/mariana-avatar.jpg` (recorte do rosto usado nos avatares do hero, da autoridade e do celular). Para trocar, mantenha os nomes dos arquivos.
    - **Entregas (prova social)**: `assets/entrega-1.jpg` a `entrega-5.jpg`, com as placas dos clientes borradas. Para adicionar ou trocar, edite a seção `#clientes` do `index.html`.
 3. **Fotos de carro**: `assets/hero.jpg` (VW Nivus, com céu e laterais ampliados), `assets/estoque.jpg` (VW Polo), `assets/oferta.jpg` (Fiat Cronos, no celular), `assets/destaque.jpg` (Fiat Argo, card do hero) e `assets/cta-final.jpg` (VW Nivus, fundo do CTA final). Para trocar, mantenha os nomes dos arquivos.
-4. **Pixel / GA4**: cole os scripts no `<head>` (há um comentário marcando o lugar). Todo clique em CTA dispara `fbq('track','Lead')`, `gtag('event','generate_lead')` e um push `cta_whatsapp_click` no `dataLayer`, com a posição do botão.
+4. **Meta Pixel**: instalado no `<head>` (ID `1854482842391080`), com PageView no carregamento e `Lead` no clique de qualquer botão do WhatsApp (com a posição do botão em `cta_position`). Também vai um push `cta_whatsapp_click` no `dataLayer`. **GA4**: cole o código no `<head>`, no comentário marcado; o clique já dispara `generate_lead` quando o `gtag` existe.
 
 ## Editar textos, link e imagens: `content.json`
 
@@ -30,3 +30,7 @@ Todos os textos da página (142 campos), o link do grupo, as headlines do teste 
 | `?cta=2` | Botões principais viram "Ver os carros primeiro" |
 
 Exemplo: `https://seudominio.com/?h=c&cta=2`
+
+## Publicação na Hostinger (GitHub)
+
+A Hostinger publica o conteúdo da raiz do repositório. Depois de mesclar o PR na `main`, aponte o deploy Git da Hostinger para a branch `main`. O `index.html`, o `content.json` e a pasta `assets/` precisam ficar juntos na pasta pública do site.
