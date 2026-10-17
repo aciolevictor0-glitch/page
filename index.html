@@ -35,7 +35,24 @@
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '1854482842391080');
-  fbq('track', 'PageView');
+  // API de Conversões: cada evento vai pelo Pixel e pelo servidor (capi.php)
+  // com o mesmo event_id, para a Meta deduplicar.
+  window.rdeEventId = function () { return Date.now().toString(36) + "." + Math.random().toString(36).slice(2, 10); };
+  window.rdeCapi = function (name, id, data) {
+    try {
+      if (location.protocol === "file:") return;
+      var c = document.cookie, get = function (n) { var m = c.match(new RegExp("(?:^|; )" + n + "=([^;]+)")); return m ? decodeURIComponent(m[1]) : ""; };
+      var fbc = get("_fbc"), clid = new URLSearchParams(location.search).get("fbclid");
+      if (!fbc && clid) fbc = "fb.1." + Date.now() + "." + clid;
+      var body = JSON.stringify({ event_name: name, event_id: id, event_source_url: location.href, fbp: get("_fbp"), fbc: fbc, custom_data: data || {} });
+      if (navigator.sendBeacon && navigator.sendBeacon("capi.php", new Blob([body], { type: "application/json" }))) return;
+      fetch("capi.php", { method: "POST", body: body, headers: { "Content-Type": "application/json" }, keepalive: true });
+    } catch (e) {}
+  };
+  var rdePageViewId = rdeEventId();
+  fbq('track', 'PageView', {}, { eventID: rdePageViewId });
+  // envia pelo servidor depois do carregamento, quando o cookie _fbp já existe
+  window.addEventListener("load", function () { setTimeout(function () { rdeCapi("PageView", rdePageViewId); }, 1200); });
   </script>
   <!-- End Meta Pixel Code -->
   <!-- GA4: cole aqui o código do Google, se for usar. O clique nos botões já dispara gtag('event','generate_lead') quando o gtag existe. -->
@@ -1064,7 +1081,9 @@
         a.rel = "noopener";
         a.addEventListener("click", function () {
           var data = { cta_position: a.getAttribute("data-cta"), headline: h, cta_variant: cta };
-          try { if (window.fbq) fbq("track", "Lead", data); } catch (e) {}
+          var leadId = window.rdeEventId ? rdeEventId() : String(Date.now());
+          try { if (window.fbq) fbq("track", "Lead", data, { eventID: leadId }); } catch (e) {}
+          try { if (window.rdeCapi) rdeCapi("Lead", leadId, data); } catch (e) {}
           try { if (window.gtag) gtag("event", "generate_lead", data); } catch (e) {}
           try { (window.dataLayer = window.dataLayer || []).push(Object.assign({ event: "cta_whatsapp_click" }, data)); } catch (e) {}
         });
