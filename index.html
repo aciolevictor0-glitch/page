@@ -16,8 +16,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/hero.jpg">
+  <!-- fontes sem bloquear a primeira pintura da tela -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <!-- Caveat só para a assinatura do PS: baixa apenas as letras usadas (~3 KB em vez de 51 KB) -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&text=Mariana%20Amorim&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" as="image" href="assets/hero-mobile.jpg" media="(max-width: 760px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/hero.jpg" media="(min-width: 761px)" fetchpriority="high">
 
   <!-- Meta Pixel Code -->
   <script>
@@ -439,7 +444,7 @@
     }
     .final::before {
       content: ""; position: absolute; inset: 0; opacity: .25;
-      background: var(--final-bg, url("assets/cta-final.jpg")) center 60% / cover no-repeat; z-index: 0;
+      background: var(--final-bg, none) center 60% / cover no-repeat; z-index: 0;
     }
     .final::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21,27,39,.6), rgba(21,27,39,.95)); z-index: 0; }
     .final > * { position: relative; z-index: 1; }
@@ -494,6 +499,11 @@
       .phone__notif { left: -10px; }
     }
     @media (max-width: 760px) {
+      /* desempenho no celular: sem desfoque de fundo e sem zoom animado no hero */
+      .glass, .chip, .nav__cta, .brand__mark, .sticky-cta, .gallery__item figcaption { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+      .glass { background: rgba(21,27,39,.62); }
+      .chip, .nav__cta, .brand__mark { background: rgba(21,27,39,.45); }
+      .hero__bg { animation: none; transform: none; background-image: url("assets/hero-mobile.jpg"); }
       .section { padding: 72px 0; }
       .container { padding: 0 16px; }
       .nav { padding: 16px 0; }
@@ -1079,6 +1089,14 @@
       var sticky = document.querySelector("[data-sticky]");
       var hero = document.querySelector(".hero");
       var finalBox = document.querySelector(".final");
+      var finalBgUrl = "assets/cta-final.jpg", finalBgOn = false;
+      function showFinalBg() { if (finalBox) finalBox.style.setProperty("--final-bg", 'url("' + finalBgUrl + '")'); }
+      if (finalBox && "IntersectionObserver" in window) {
+        var bgIo = new IntersectionObserver(function (e) {
+          if (e[0].isIntersecting) { finalBgOn = true; showFinalBg(); bgIo.disconnect(); }
+        }, { rootMargin: "600px 0px" });
+        bgIo.observe(finalBox);
+      } else { finalBgOn = true; showFinalBg(); }
       var heroOut = false, finalIn = false;
       function syncSticky() { sticky.classList.toggle("is-visible", heroOut && !finalIn); }
       if ("IntersectionObserver" in window) {
@@ -1130,8 +1148,9 @@
           if (typeof v.alt === "string" && el.getAttribute("alt") !== "") el.alt = v.alt;
         });
         var bg = document.querySelector("[data-bg]");
-        if (bg && img.hero_fundo) bg.style.backgroundImage = 'url("' + img.hero_fundo + '")';
-        if (finalBox && img.cta_final_fundo) finalBox.style.setProperty("--final-bg", 'url("' + img.cta_final_fundo + '")');
+        // só troca o fundo se for outra foto (assim o celular continua com a versão leve)
+        if (bg && img.hero_fundo && img.hero_fundo !== "assets/hero.jpg") bg.style.backgroundImage = 'url("' + img.hero_fundo + '")';
+        if (img.cta_final_fundo) { finalBgUrl = img.cta_final_fundo; if (finalBgOn) showFinalBg(); }
         applyVariants();
         syncBtns();
       }
