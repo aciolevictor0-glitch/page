@@ -34,3 +34,17 @@ Exemplo: `https://seudominio.com/?h=c&cta=2`
 ## Publicação na Hostinger (GitHub)
 
 A Hostinger publica o conteúdo da raiz do repositório. Depois de mesclar o PR na `main`, aponte o deploy Git da Hostinger para a branch `main`. O `index.html`, o `content.json` e a pasta `assets/` precisam ficar juntos na pasta pública do site.
+
+## API de Conversões da Meta (`capi.php`)
+
+Cada evento (PageView ao abrir e Lead no clique dos botões do WhatsApp) vai pelo Pixel **e** pelo servidor, com o mesmo `event_id`, e a Meta deduplica. O `capi.php` repassa para a Meta com o IP, o navegador e os cookies `_fbp`/`_fbc` do visitante.
+
+**Ativar (uma vez, na Hostinger):**
+
+1. No Gerenciador de Eventos da Meta, abra o pixel `1854482842391080` > Configurações > API de Conversões > **Gerar token de acesso**.
+2. No Gerenciador de Arquivos da Hostinger, crie o arquivo `capi-config.php` na pasta **acima** da `public_html` (a pasta do domínio), com o conteúdo de `capi-config.example.php` e o token colado.
+3. Abra `https://marianaveiculos.com.br/capi.php`: deve mostrar `{"ok":true,"configurado":true}`.
+
+- O token nunca vai para o GitHub (`capi-config.php` está no `.gitignore`).
+- Para validar no "Testar eventos", preencha `test_event_code` no `capi-config.php` com o código de teste e esvazie depois.
+- Só aceita PageView e Lead vindos de `marianaveiculos.com.br`.
